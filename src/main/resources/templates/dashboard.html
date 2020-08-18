@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/colors/color1.css}" id="colors">
+    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/animate.css}">
+    <link th:href="@{/icon/apple-touch-icon-48-precomposed.html}" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link th:href="@{/icon/apple-touch-icon-32-precomposed.png}" rel="apple-touch-icon-precomposed">
+    <link th:href="@{/icon/favicon.png}" rel="shortcut icon">
+
+    <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.easing.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.cookie.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.fitvids.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/parallax.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.magnific-popup.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.magnific-popup.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.flexslider-min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery-validate.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery-countTo.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery-waypoints.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/switcher.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/main.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.tools.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.revolution.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/slider.js}"></script>
+
+    <!--[if lt IE 9]>
+    <script th:src="@{/javascript/html5shiv.js}"></script>
+    <script th:src="@{/javascript/respond.min.js}"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header-text{
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body class="header_sticky">
+<!-- Preloader -->
+<section class="loading-overlay">
+    <div class="Loading-Page">
+        <h2 class="loader">Loading</h2>
+    </div>
+</section>
+<!-- Boxed -->
+<div class="boxed">
+    <!-- Header -->
+    <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
+        <div class="container">
+            <div class="row" style="margin-left: 9%">
+                <div class="header-wrap clearfix">
+                    <div class="col-md-3" style="margin-top: 1%">
+                        <div id="logo" class="logo">
+                            <a href="#" rel="home">
+                                <img src="newlife/images/logoNewlife.png" alt="image" style="margin-bottom: 3%">
+                                <span class="header-text" style="margin-left: 4%; font-size: 15px">NEWLIFE</span>
+                            </a>
+                        </div><!-- /.logo -->
+                    </div>
+                    <div class="col-md-9">
+                        <div class="nav-wrap">
+                            <nav id="mainnav" class="mainnav">
+                                <ul class="menu">
+                                    <li class="home">
+                                        <a href="#" class="header-text">Home</a>
+                                        <ul class="submenu">
+                                            <li><a href="#" class="header-text">Home 01 </a>
+                                            </li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                    <li><a href="#" class="header-text">About</a>
+                                        <ul class="submenu">
+                                            <li><a href="#" class="header-text">About</a>
+                                            </li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                    <li><a href="#" class="header-text">Services</a>
+                                        <ul class="submenu">
+                                            <li><a href="#" class="header-text">Services 01</a>
+                                            </li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                    <li><a href="#" class="header-text">JOIN US</a>
+                                        <ul class="submenu">
+                                            <li><a href="#" class="header-text">JOIN US 01</a>
+                                            </li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                    <li><a href="#" class="header-text">Contact Us</a></li>
+                                    <li><a href="#" class="header-text">Blog</a>
+                                        <ul class="submenu right-sub-menu">
+                                            <li><a href="#" class="header-text">Blog </a>
+                                            </li>
+                                            <li><a href="#" class="header-text">Blog Single</a>
+                                            </li>
+                                        </ul><!-- /.submenu -->
+                                    </li>
+                                </ul><!-- /.menu -->
+                            </nav><!-- /.mainnav -->
+                        </div><!-- /.nav-wrap -->
+                    </div>
+                </div><!-- /.header-inner -->
+            </div><!-- /.row -->
+        </div>
+    </header><!-- /.header -->
+
+    <!-- Slider -->
+    <div class="tp-banner-container" id="home">
+        <div class="tp-banner">
+            <ul>
+                <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000"
+                    data-saveperformance="on">
+                    <img src="newlife/images/image2.png" alt="slider-image"/>
+                    <div class="tp-caption sfl title-slide color-white center" data-x="15" data-y="110"
+                         data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                        Testing & Optimize
+                    </div>
+                    <div class="tp-caption sfr desc-slide color-white center" data-x="15" data-y="250" data-speed="1000"
+                         data-start="1500" data-easing="Power3.easeInOut">
+                        Management System
+                    </div>
+
+                    <div class="tp-caption element-slider sfb" data-x="850" data-y="180" data-speed="1000"
+                         data-start="2000" data-easing="Power3.easeInOut">
+                        <img src="newlife/images/laptop.png" alt="content">
+                    </div>
+
+                    <div class="tp-caption element-slider sfb" data-x="715" data-y="320" data-speed="1000"
+                         data-start="2500" data-easing="Power3.easeInOut">
+                        <img src="newlife/images/iphone.png" alt="content">
+                    </div>
+
+                    <div class="tp-caption sfl flat-button-slider bg-button-slider-32bfc0" data-x="15" data-y="360"
+                         data-speed="1000" data-start="2500" data-easing="Power3.easeInOut"><a href="#">Learn More</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></div>
+                </li>
+
+                <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000"
+                    data-saveperformance="on">
+                    <img src="images/slides/slide2.jpg" alt="slider-image"/>
+                    <div class="tp-caption sfl title-slide color-white center" data-x="15" data-y="110"
+                         data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
+                        Business <br> Mean Marketing
+                    </div>
+                    <div class="tp-caption sfr desc-slide color-white center" data-x="15" data-y="250" data-speed="1000"
+                         data-start="1500" data-easing="Power3.easeInOut">
+                        Daily position tracking &amp; competitor tracking, anytime, anywhere!
+                    </div>
+
+                    <div class="tp-caption element-slider sfb" data-x="850" data-y="180" data-speed="1000"
+                         data-start="2000" data-easing="Power3.easeInOut">
+                        <img src="images/slides/content2.png" alt="content">
+                    </div>
+
+                    <div class="tp-caption element-slider sfb" data-x="715" data-y="320" data-speed="1000"
+                         data-start="2500" data-easing="Power3.easeInOut">
+                        <img src="images/slides/content2-1.png" alt="content">
+                    </div>
+
+                    <div class="tp-caption sfl flat-button-slider bg-button-slider-32bfc0" data-x="15" data-y="360"
+                         data-speed="1000" data-start="2500" data-easing="Power3.easeInOut"><a href="#">Read More</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Iconbox -->
+    <section class="flat-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section">
+                        <h1 class="title">How we can help your <span>business</span> grow</h1>
+                        <div class="sub-title">What You Get Using Our SEO Company’s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="iconbox center circle lagre">
+                        <div class="box-header">
+                            <img src="images/icon/icon4.svg" alt="icon">
+                            <div class="box-title"><a href="#">Website Development</a></div>
+                        </div>
+                        <div class="box-content">
+                            Analyzing negative materials about your brand and addressing them with sentiment analysis
+                            and press release distribution.
+                        </div>
+                        <div class="box-redmore">
+                            <a href="#">Read More</a>
+                        </div>
+
+                    </div><!-- /.iconbox -->
+                </div><!-- /.col-md-4 -->
+
+
+                <div class="col-md-4">
+                    <div class="iconbox center circle lagre">
+                        <div class="box-header">
+                            <img src="images/icon/icon7.svg" alt="icon">
+                            <div class="box-title"><a href="#">Content Marketing</a></div>
+                        </div>
+                        <div class="box-content">
+                            Turn your visitors into customers with our team of experts. We'll analyze your website and
+                            develop a suitable
+                        </div>
+                        <div class="box-redmore">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div><!-- /.iconbox -->
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="iconbox center circle lagre">
+                        <div class="box-header">
+                            <img src="images/icon/icon8.svg" alt="icon">
+                            <div class="box-title"><a href="#">Conversion Optimization</a></div>
+                        </div>
+                        <div class="box-content">
+                            We produce bespoke reports and technical audits that can help your business with specific
+                            areas of digital marketing.
+                        </div>
+                        <div class="box-redmore">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div><!-- /.iconbox -->
+                </div><!-- /.col-md-4 -->
+            </div>
+        </div><!-- /.container -->
+    </section>
+
+    <!-- Partner -->
+    <section class="flat-row row-partners no-border">
+        <ul class="flat-client" data-item="7" data-margin="2" data-nav="false" data-dots="false" data-auto="true">
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-01.jpg"/>
+            </li>
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-02.jpg"/>
+            </li>
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-03.jpg"/>
+            </li>
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-04.jpg"/>
+            </li>
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-05.jpg"/>
+            </li>
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-06.jpg"/>
+            </li>
+            <li>
+                <img alt="owlcarousel-item-img" src="images/clients/Logo-01.jpg"/>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Accordion Style6 -->
+    <section class="flat-row no-paddingbottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section">
+                        <h1 class="title">What we do ? <span>incrase</span> sales for you</h1>
+                        <div class="sub-title">What You Get Using Our SEO Company’s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="flat-accordion no-padding styles-2">
+
+                        <div class="flat-toggle">
+                            <h6 class="toggle-title apa active"><span> 1 </span>Is User Experience A Ranking Factor?
+                            </h6>
+                            <div class="toggle-content">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type.</p>
+
+                            </div>
+                        </div><!-- /toggle -->
+
+                        <div class="flat-toggle">
+                            <h6 class="toggle-title imp"><span> 2 </span>Google Rankings Are In Constant Ever-Flux</h6>
+                            <div class="toggle-content">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type.</p>
+                            </div>
+                        </div><!-- /toggle -->
+
+                        <div class="flat-toggle">
+                            <h6 class="toggle-title dep "><span> 3 </span>Relevance, Authority &amp; Trust</h6>
+                            <div class="toggle-content">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type.</p>
+                            </div>
+                        </div><!-- /toggle -->
+
+                        <div class="flat-toggle">
+                            <h6 class="toggle-title dep "><span> 4 </span>Relevance, Authority &amp; Trust</h6>
+                            <div class="toggle-content">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type.</p>
+                            </div>
+                        </div><!-- /toggle -->
+                    </div>
+
+                    <div class="flatcounter-wrap clearfix">
+                        <div class="flat-counter color-theme">
+                            <div class="content-counter ">
+                                <div class="numb-count" data-to="900" data-speed="4000" data-waypoint-active="yes">900
+                                </div>
+                                <div class="name-count">Happy Clients</div>
+                            </div>
+                        </div><!-- /.flat-counter -->
+
+                        <div class="flat-counter color-theme">
+                            <div class="content-counter ">
+
+                                <div class="numb-count" data-to="1340" data-speed="4000" data-waypoint-active="yes">
+                                    1340
+                                </div>
+                                <div class="name-count">Project Complete</div>
+                            </div>
+                        </div><!-- /.flat-counter -->
+
+                        <div class="flat-counter color-theme">
+                            <div class="content-counter ">
+                                <div class="numb-count" data-to="100" data-speed="4000" data-waypoint-active="yes">100
+                                </div>
+                                <div class="name-count">Top Website</div>
+                            </div>
+                        </div><!-- /.flat-counter -->
+                    </div><!-- /.flat-counter-wrap -->
+                </div>
+
+                <div class="col-md-5">
+                    <div class="request-prosopal">
+                        <h2>Request A Proposal</h2>
+                        <form action="http://corpthemes.com/html/iseo/contact/contact-process.php" method="post"
+                              id="getaudit" class="getautdit-style1" novalidate="novalidate">
+                            <p class="website">
+                                <label for="website">Your Website *</label>
+                                <input id="website" name="website" type="text" aria-required="true" required="required">
+                            </p>
+
+                            <p class="email">
+                                <label>You Email</label>
+                                <input id="email" name="email" type="email" value="" aria-required="true"
+                                       required="required">
+                            </p>
+
+                            <p class="phone">
+                                <label>You Phone</label>
+                                <input id="phone" name="phone" type="number" value="" aria-required="true"
+                                       required="required">
+                            </p>
+
+                            <label>How can we help? *</label>
+                            <select name="discuss">
+                                <option value="Content Marketing">Content Marketing</option>
+                                <option value="Video Marketing">Video Marketing</option>
+                                <option value="Web Development">Web Development</option>
+                            </select>
+
+                            <p class="form-submit">
+                                <input name="submit" type="submit" value="Submit">
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- /.container -->
+    </section>
+
+    <!-- Portfolio -->
+    <section class="flat-row no-paddingbottom" id="work">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <h1 class="title">OUR CASE STUDIES i<span>SEO</span></h1>
+                    <div class="sub-title">What You Get Using Our SEO Company’s</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flat-portfolio v4">
+            <div class="portfolio-wrap clearfix">
+                <div class="item builder painting">
+                    <div class="featured-images">
+                        <img src="images/portfolio/case-1.png" alt="images">
+                        <div class="project-title">
+                            <h3><a href="#">60% increase in organic traffic.</a></h3>
+                            <div class="project-redmore"><a href="#">See full case study</a></div>
+                        </div>
+                        <div class="overlay">
+                        </div>
+                    </div><!-- /.featured-images -->
+                </div><!-- /.portfolio-item -->
+
+                <div class="item builder painting">
+                    <div class="featured-images">
+                        <img src="images/portfolio/case-2.png" alt="images">
+                        <div class="project-title">
+                            <h3><a href="#">243% increase in the number of keywords driving traffic to the site</a></h3>
+                            <div class="project-redmore"><a href="#">See full case study</a></div>
+                        </div>
+                        <div class="overlay">
+                        </div>
+                    </div><!-- /.featured-images -->
+                </div><!-- /.portfolio-item -->
+
+                <div class="item builder painting">
+                    <div class="featured-images">
+                        <img src="images/portfolio/case-3.png" alt="images">
+                        <div class="project-title">
+                            <h3><a href="#">391% increase in website visits.</a></h3>
+                            <div class="project-redmore"><a href="#">See full case study</a></div>
+                        </div>
+                        <div class="overlay">
+                        </div>
+                    </div><!-- /.featured-images -->
+                </div><!-- /.portfolio-item -->
+
+                <div class="item builder painting">
+                    <div class="featured-images">
+                        <img src="images/portfolio/case-4.png" alt="images">
+                        <div class="project-title">
+                            <h3><a href="#">568.67% increase in website traffic.</a></h3>
+                            <div class="project-redmore"><a href="#">See full case study</a></div>
+                        </div>
+                        <div class="overlay">
+                        </div>
+                    </div><!-- /.featured-images -->
+                </div><!-- /.portfolio-item -->
+            </div><!-- /.portfolio-wrap -->
+        </div><!-- /.flat-portfolio -->
+    </section>
+
+    <!-- Flat price table -->
+    <section class="flat-row background-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        <h1 class="title">PRICING TABLES i<span>SEO</span></h1>
+                        <div class="sub-title">What You Get Using Our SEO Company’s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="flat-price-table">
+                        <h4 class="price-title">STANDARD PLAN</h4>
+                        <div class="sub-title">The best to start</div>
+                        <div class="price">
+                            <span class="currency-unit">$</span>
+                            <span class="money">20.59</span>
+                            <span class="time"> /PER MONTH</span>
+                        </div>
+                        <ul class="price-table-list">
+                            <li>25 Analytics Compaign</li>
+                            <li>Branded Reports</li>
+                            <li>1,900 Keywords</li>
+                            <li>4 Social Account</li>
+                        </ul>
+                        <a href="#" class="price-buynow">Purchase</a>
+                    </div><!-- /.flat-price-table -->
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="flat-price-table gold">
+                        <h4 class="price-title">ADVANCED PLAN</h4>
+                        <div class="sub-title">The best to start</div>
+                        <div class="price">
+                            <span class="currency-unit">$</span>
+                            <span class="money">35.50</span>
+                            <span class="time"> /PER MONTH</span>
+                        </div>
+                        <ul class="price-table-list">
+                            <li>25 Analytics Compaign</li>
+                            <li>Branded Reports</li>
+                            <li>1,900 Keywords</li>
+                            <li>4 Social Account</li>
+                        </ul>
+                        <a href="#" class="price-buynow">Purchase</a>
+                    </div><!-- /.flat-price-table -->
+                </div><!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="flat-price-table premium">
+                        <h4 class="price-title">PREMIUM PLAN</h4>
+                        <div class="sub-title">The best to start</div>
+                        <div class="price">
+                            <span class="currency-unit">$</span>
+                            <span class="money">79.88</span>
+                            <span class="time"> /PER MONTH</span>
+                        </div>
+                        <ul class="price-table-list">
+                            <li>25 Analytics Compaign</li>
+                            <li>Branded Reports</li>
+                            <li>1,900 Keywords</li>
+                            <li>4 Social Account</li>
+                        </ul>
+                        <a href="#" class="price-buynow">Purchase</a>
+                    </div><!-- /.flat-price-table -->
+                </div><!-- /.col-md-4 -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- Blog -->
+    <section class="flat-row latest-blog" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        <h1 class="title">LATEST NEWS i<span>SEO</span></h1>
+                        <div class="sub-title">What You Get Using Our SEO Company’s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="blog-shortcode blog-carosuel-wrap">
+                        <div class="blog-carosuel">
+                            <article class="post clearfix">
+                                <div class="featured-post">
+                                    <div class="overlay"></div>
+                                    <img src="images/blog/blog13.jpg" alt="image">
+
+                                </div><!-- /.feature-post -->
+                                <div class="content-post">
+                                    <div class="post-category">
+                                        <i class="fa fa-file-video-o"></i>
+                                    </div>
+
+                                    <h2 class="title-post"><a href="blog-single.html">How to Create Contents That Get
+                                        Traffic</a></h2>
+                                    <ul class="meta-post clearfix">
+                                        <li class="author">
+                                            <a href="#">By Admin</a>
+                                        </li>
+                                        <li class="categories">
+                                            <a href="#">Makerting</a>, <a href="#">Seo</a>
+                                        </li>
+                                        <li class="vote">
+                                            <a href="#">16</a>
+                                        </li>
+                                    </ul><!-- /.meta-post -->
+                                    <div class="entry-post excerpt">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                        </p>
+                                        <a class="read-more" href="blog-single.html">
+                                            Continue reading
+                                        </a>
+                                    </div>
+                                </div><!-- /.content-post -->
+                            </article>
+
+                            <article class="post clearfix">
+                                <div class="featured-post">
+                                    <div class="overlay"></div>
+                                    <img src="images/blog/blog-gr1.jpg" alt="image">
+
+                                </div><!-- /.feature-post -->
+                                <div class="content-post">
+                                    <div class="post-category">
+                                        <i class="fa fa-file-image-o"></i>
+                                    </div>
+
+                                    <h2 class="title-post"><a href="blog-single.html">10 Marketing Blogs You Should be
+                                        Reading</a></h2>
+                                    <ul class="meta-post clearfix">
+                                        <li class="author">
+                                            <a href="#">By Admin</a>
+                                        </li>
+                                        <li class="categories">
+                                            <a href="#">Business</a>, <a href="#">Marketing</a>
+                                        </li>
+                                        <li class="vote">
+                                            <a href="#">16</a>
+                                        </li>
+                                    </ul><!-- /.meta-post -->
+                                    <div class="entry-post excerpt">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                        </p>
+                                        <a class="read-more" href="blog-single.html">
+                                            Continue reading
+                                        </a>
+                                    </div>
+                                </div><!-- /.content-post -->
+                            </article>
+
+                            <article class="post clearfix">
+                                <div class="featured-post">
+                                    <div class="overlay"></div>
+                                    <img src="images/blog/blog-gr2.jpg" alt="image">
+
+                                </div><!-- /.feature-post -->
+                                <div class="content-post">
+                                    <div class="post-category">
+                                        <i class="fa fa-file-audio-o"></i>
+
+                                    </div>
+                                    <h2 class="title-post"><a href="blog-single.html">Make Users Fall in Love With Your
+                                        Website</a></h2>
+                                    <ul class="meta-post clearfix">
+                                        <li class="author">
+                                            <a href="#">By Admin</a>
+                                        </li>
+                                        <li class="categories">
+                                            <a href="#">Website</a>, <a href="#">Seo</a>
+                                        </li>
+                                        <li class="vote">
+                                            <a href="#">16</a>
+                                        </li>
+                                    </ul><!-- /.meta-post -->
+                                    <div class="entry-post excerpt">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                        </p>
+                                        <a class="read-more" href="blog-single.html">
+                                            Continue reading </a>
+                                    </div>
+                                </div><!-- /.content-post -->
+                            </article>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="widget widget-brand">
+                            <div class="logo logo-footer">
+                                <a href="#"><img src="images/logo-footer.png" alt="Good News"></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non turpis auctor, </p>
+                        </div><!-- /.widget-brand -->
+                        <div class="widget widget-social">
+                            <h5 class="widget-title">Follow Us</h5>
+                            <div class="social-list">
+                                <a href="#"><img src="images/facebook.svg" alt="image"></a>
+                                <a href="#"><img src="images/twitter.svg" alt="image"></a>
+                                <a href="#"><img src="images/youtube.svg" alt="image"></a>
+                                <a href="#"><img src="images/dribbble.svg" alt="image"></a>
+                            </div>
+                            <a class="email" href="#">Email@yourcompany.com</a>
+                        </div><!-- /.widget-social -->
+                    </div><!-- /.col-md-4 -->
+
+                    <div class="col-md-4">
+                        <div class="widget widget-services clearfix">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <ul class="one-half">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Cart</a></li>
+                            </ul>
+
+                            <ul class="one-half">
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="widget widget-newsletter">
+                            <h5 class="widget-title">Subscribe Newsletter</h5>
+                            <p>Lorem ipsum dolor sit amet consul me omittantur an cum an ignota possitpat illum indoctum
+                                quaerendum</p>
+                            <form method="post" action="#" id="subscribe-form" data-mailchimp="true">
+                                <div id="subscribe-content">
+                                    <div class="input">
+                                        <input type="text" id="subscribe-email" name="subscribe-email"
+                                               placeholder="Your address e-mail">
+                                    </div>
+                                    <div class="button">
+                                        <button type="button" id="subscribe-button" class="" title="Subscribe now"><i
+                                                class="fa fa-paper-plane-o"></i></button>
+                                    </div>
+                                </div>
+                                <div id="subscribe-msg"></div>
+                            </form>
+                        </div><!-- /.widget-newsletter -->
+                    </div>
+
+                </div><!-- /.row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>© Copyright <a href="#">Themesflat</a> 2017. All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- /.footer-widgets -->
+    </footer>
+
+    <!-- Go Top -->
+    <a class="go-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+    <div id="site-off-canvas">
+        <span class="close"></span>
+        <div class="wrapper">
+
+            <div class="widget widget_search">
+                <form role="search" method="get" class="search-form" action="#">
+                    <label>
+                        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                    </label>
+                    <input type="submit" class="search-submit" value="Search">
+                </form>
+            </div><!-- /.widget-search -->
+
+
+            <div id="nav_menu-2" class="widget widget-categories">
+                <h4 class="widget-title">Extra Pages</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog-single.html">Blog Single</a></li>
+                    <li><a href="#">Left Sidebar</a></li>
+                    <li><a href="#">Right Sidebar</a></li>
+                    <li><a href="#">Full Width</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

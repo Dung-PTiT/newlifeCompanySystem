@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        <meta name="author" content="themesflat.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/style.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/colors/color1.css}" id="colors">
+        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/animate.css}">
+        <link th:href="@{/icon/apple-touch-icon-48-precomposed.html}" rel="apple-touch-icon-precomposed" sizes="48x48">
+        <link th:href="@{/icon/apple-touch-icon-32-precomposed.png}" rel="apple-touch-icon-precomposed">
+        <link th:href="@{/icon/favicon.png}" rel="shortcut icon">
+
+        <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.easing.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.cookie.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.fitvids.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/parallax.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.magnific-popup.min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.magnific-popup.min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.flexslider-min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery-validate.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery-countTo.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery-waypoints.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/switcher.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/main.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.tools.min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.revolution.min.js}"></script>
+        <script type="text/javascript" th:src="@{/javascript/slider.js}"></script>
+
+        <!--[if lt IE 9]>
+        <script th:src="@{/javascript/html5shiv.js}"></script>
+        <script th:src="@{/javascript/respond.min.js}"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css"
+              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body class="header_sticky">
+        <div class="boxed">
+            <header id="header" class="header clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo">
+                                    <a href="#" rel="home">
+                                        <img th:src="@{/images/logo.png}" alt="image">
+                                    </a>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li class="home">
+                                                <a href="#">Home</a>
+                                                <ul class="submenu">
+                                                    <li>
+                                                        <a href="#">Home 01</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Home 02</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Home 03</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">About</a>
+                                                <ul class="submenu">
+                                                    <li>
+                                                        <a href="#">About</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Team 01</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Team 02</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Services</a>
+                                                <ul class="submenu">
+                                                    <li>
+                                                        <a href="#">Services 01</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Services 02</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Services 03</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Services Single</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Case Studies</a>
+                                                <ul class="submenu">
+                                                    <li>
+                                                        <a href="#">Case Studies</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Single Case</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                            <li>
+                                                <a href="#">Contact Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Blog</a>
+                                                <ul class="submenu right-sub-menu">
+                                                    <li>
+                                                        <a href="#">Blog</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Blog Single</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="home" layout:fragment="content_body">
+            </div>
+            <footer class="footer">
+                <div class="footer-widgets">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="widget widget-brand">
+                                    <div class="logo logo-footer">
+                                        <a href="#">
+                                            <img th:src="@{/images/logo-footer.png}" alt="Good News">
+                                        </a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non turpis
+                                        auctor,
+                                    </p>
+                                </div>
+                                <div class="widget widget-social">
+                                    <h5 class="widget-title">Follow Us</h5>
+                                    <div class="social-list">
+                                        <a href="#">
+                                            <img th:src="@{/images/facebook.svg}" alt="image">
+                                        </a>
+                                        <a href="#">
+                                            <img th:src="@{/images/twitter.svg}" alt="image">
+                                        </a>
+                                        <a href="#">
+                                            <img th:src="@{/images/youtube.svg}" alt="image">
+                                        </a>
+                                        <a href="#">
+                                            <img th:src="@{/images/dribbble.svg}" alt="image">
+                                        </a>
+                                    </div>
+                                    <a class="email" href="#">Email@yourcompany.com</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget widget-services clearfix">
+                                    <h5 class="widget-title">Quick Links</h5>
+                                    <ul class="one-half">
+                                        <li>
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">About us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cart</a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="one-half">
+                                        <li>
+                                            <a href="#">Shop</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Checkout</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">My Account</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">News</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="widget widget-newsletter">
+                                    <h5 class="widget-title">Subscribe Newsletter</h5>
+                                    <p>Lorem ipsum dolor sit amet consul me omittantur an cum an ignota possitpat illum
+                                        indoctum
+                                        quaerendum
+                                    </p>
+                                    <form method="post" action="#" id="subscribe-form" data-mailchimp="true">
+                                        <div id="subscribe-content">
+                                            <div class="input">
+                                                <input type="text" id="subscribe-email" name="subscribe-email"
+                                                       placeholder="Your address e-mail">
+                                            </div>
+                                            <div class="button">
+                                                <button type="button" id="subscribe-button" class=""
+                                                        title="Subscribe now">
+                                                    <i class="fa fa-paper-plane-o"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="subscribe-msg"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>© Copyright
+                                        <a href="#">Themesflat</a>
+                                        2017. All Rights Reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.container -->
+                </div><!-- /.footer-widgets -->
+            </footer>
+        </div>
+    </body>
+</html>
