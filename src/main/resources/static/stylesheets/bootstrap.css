@@ -1,10 +1,3 @@
-/*!
- * Bootstrap v3.3.4 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -266,9 +259,6 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-
-  src: url('../fonts/glyphicons-halflings-regular.html');
-  src: url('../fonts/glyphicons-halflings-regulard41d.html?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular-2.html') format('woff2'), url('../fonts/glyphicons-halflings-regular-3.html') format('woff'), url('../fonts/glyphicons-halflings-regular-4.html') format('truetype'), url('../fonts/glyphicons-halflings-regular-5.html#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6092,8 +6082,8 @@ button.close {
 
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    -webkit-perspective: 1000;
-            perspective: 1000;
+    /*-webkit-perspective: 1000;*/
+    /*        perspective: 1000;*/
   }
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
@@ -6371,9 +6361,9 @@ button.close {
 .affix {
   position: fixed;
 }
-@-ms-viewport {
-  width: device-width;
-}
+/*@-ms-viewport {*/
+/*  width: device-width;*/
+/*}*/
 .visible-xs,
 .visible-sm,
 .visible-md,
@@ -6581,4 +6571,4 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+

@@ -1109,7 +1109,7 @@
     border-width: 6px 6px 6px 6px;
     border-color: #fff transparent transparent transparent;
     z-index: 998;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
@@ -1800,7 +1800,7 @@ ul.portfolio-filter li:last-child a:after {
 
 .images-hover:hover:after,
 .images-hover:hover:before {
-    z-index: 30px;
+    z-index: 30;
     visibility: visible;
     -webkit-opacity: 1;
     -khtml-opacity: 1;
@@ -2326,7 +2326,7 @@ ul.portfolio-filter li:last-child a:after {
     -filter: alpha(opacity=100);
     -webkit-transform: scale(1);
     transform: scale(1);
-    font-size: 1;
+    font-size: 1px;
     z-index: 99;
 }    
 
@@ -2432,7 +2432,7 @@ ul.portfolio-filter li:last-child a:after {
     -filter: alpha(opacity=100);
     -webkit-transform: scale(1);
     transform: scale(1);
-    font-size: 1;
+    font-size: 1px;
     z-index: 99;
 }    
 
