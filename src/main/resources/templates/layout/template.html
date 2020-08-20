@@ -13,7 +13,8 @@
         <link th:href="@{/icon/apple-touch-icon-48-precomposed.html}" rel="apple-touch-icon-precomposed" sizes="48x48">
         <link th:href="@{/icon/apple-touch-icon-32-precomposed.png}" rel="apple-touch-icon-precomposed">
         <link th:href="@{/icon/favicon.png}" rel="shortcut icon">
-
+        <link rel="stylesheet" type="text/css"
+              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/jquery.easing.js}"></script>
@@ -26,152 +27,112 @@
         <script type="text/javascript" th:src="@{/javascript/jquery-validate.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/jquery-countTo.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/jquery-waypoints.js}"></script>
-        <script type="text/javascript" th:src="@{/javascript/switcher.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/main.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.tools.min.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.revolution.min.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/slider.js}"></script>
-
-        <!--[if lt IE 9]>
-        <script th:src="@{/javascript/html5shiv.js}"></script>
-        <script th:src="@{/javascript/respond.min.js}"></script>
-        <![endif]-->
         <link rel="stylesheet" type="text/css"
               href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">
+        </script>
     </head>
     <body class="header_sticky">
         <div class="boxed">
-            <header id="header" class="header clearfix">
-                <div class="container">
-                    <div class="row">
-                        <div class="header-wrap clearfix">
-                            <div class="col-md-3">
-                                <div id="logo" class="logo">
-                                    <a href="#" rel="home">
-                                        <img th:src="@{/images/logo.png}" alt="image">
-                                    </a>
-                                </div>
-                                <div class="btn-menu">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="nav-wrap">
-                                    <nav id="mainnav" class="mainnav">
-                                        <ul class="menu">
-                                            <li class="home">
-                                                <a href="#">Home</a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="#">Home 01</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Home 02</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Home 03</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">About</a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="#">About</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Team 01</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Team 02</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Services</a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="#">Services 01</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Services 02</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Services 03</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Services Single</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Case Studies</a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="#">Case Studies</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Single Case</a>
-                                                    </li>
-                                                </ul>
-
-                                            </li>
-                                            <li>
-                                                <a href="#">Contact Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Blog</a>
-                                                <ul class="submenu right-sub-menu">
-                                                    <li>
-                                                        <a href="#">Blog</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Blog Single</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
+            <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
+                <div class="row" style="margin-left: 9vw">
+                    <div class="header-wrap clearfix">
+                        <div class="col-md-1" style="margin-top: 1%">
+                            <div id="logo" class="logo">
+                                <a th:href="@{/dashboard}" rel="home">
+                                    <img th:src="@{/newlife/images/logoNewlife.png}" alt="image"
+                                         style="margin-bottom: 3%">
+                                    <span class="header-text" style="margin-left: 4%; font-size: 18px">NEWLIFE</span>
+                                </a>
+                            </div><!-- /.logo -->
+                        </div>
+                        <div class="col-md-11">
+                            <div class="nav-wrap">
+                                <nav id="mainnav" class="mainnav">
+                                    <ul class="menu" style="text-align: left">
+                                        <li class="home" style="margin-left: 10vw;">
+                                            <a th:href="@{/dashboard}" class="header-text">Home</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="#" class="header-text">Home 01</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header-text">About</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="#" class="header-text">About</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header-text">Services</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="#" class="header-text">Services 01</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header-text">JOIN US</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="#" class="header-text">JOIN US 01</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header-text">Contact Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header-text">Blog</a>
+                                            <ul class="submenu right-sub-menu">
+                                                <li>
+                                                    <a href="#" class="header-text">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="header-text">Blog Single</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <div id="home" layout:fragment="content_body">
+            <div layout:fragment="content_body">
             </div>
-            <footer class="footer">
+            <footer class="footer" style="padding-bottom: 30px">
                 <div class="footer-widgets">
-                    <div class="container">
+                    <div class="container" style="width: 75%;">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="widget widget-brand">
-                                    <div class="logo logo-footer">
-                                        <a href="#">
-                                            <img th:src="@{/images/logo-footer.png}" alt="Good News">
-                                        </a>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non turpis
-                                        auctor,
-                                    </p>
+                            <div class="col-md-4" style="margin-top: 45px; color: #ffffff !important;">
+                                <div class="logo logo-footer">
+                                    <a href="#" rel="home">
+                                        <img th:src="@{/newlife/images/logoNewlife.png}" alt="image"
+                                             style="margin-bottom: 3%">
+                                        <span class="header-text" style="margin-left: 4%; font-size: 20px">NEWLIFE
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="widget widget-social">
-                                    <h5 class="widget-title">Follow Us</h5>
-                                    <div class="social-list">
-                                        <a href="#">
-                                            <img th:src="@{/images/facebook.svg}" alt="image">
-                                        </a>
-                                        <a href="#">
-                                            <img th:src="@{/images/twitter.svg}" alt="image">
-                                        </a>
-                                        <a href="#">
-                                            <img th:src="@{/images/youtube.svg}" alt="image">
-                                        </a>
-                                        <a href="#">
-                                            <img th:src="@{/images/dribbble.svg}" alt="image">
-                                        </a>
-                                    </div>
-                                    <a class="email" href="#">Email@yourcompany.com</a>
+                                <p>Address: Số 5, 33/189 Ô Chợ Dừa Đống Đa Hà Nội</p>
+                                <p>Phone: 091 356 2868</p>
+                                <p>Email: Info@ssmvn.net</p>
+                            </div>
+                            <div class="col-md-4" style="padding-left: 0!important;">
+                                <div class="widget widget-newsletter">
+                                    <div id="add_company_map" class="vmap"
+                                         style="height: 250px !important; width: 100%"></div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -179,7 +140,7 @@
                                     <h5 class="widget-title">Quick Links</h5>
                                     <ul class="one-half">
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a th:href="@{/dashboard}">Home</a>
                                         </li>
                                         <li>
                                             <a href="#">About us</a>
@@ -194,7 +155,6 @@
                                             <a href="#">Cart</a>
                                         </li>
                                     </ul>
-
                                     <ul class="one-half">
                                         <li>
                                             <a href="#">Shop</a>
@@ -211,45 +171,50 @@
                                     </ul>
                                 </div>
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="widget widget-newsletter">
-                                    <h5 class="widget-title">Subscribe Newsletter</h5>
-                                    <p>Lorem ipsum dolor sit amet consul me omittantur an cum an ignota possitpat illum
-                                        indoctum
-                                        quaerendum
-                                    </p>
-                                    <form method="post" action="#" id="subscribe-form" data-mailchimp="true">
-                                        <div id="subscribe-content">
-                                            <div class="input">
-                                                <input type="text" id="subscribe-email" name="subscribe-email"
-                                                       placeholder="Your address e-mail">
-                                            </div>
-                                            <div class="button">
-                                                <button type="button" id="subscribe-button" class=""
-                                                        title="Subscribe now">
-                                                    <i class="fa fa-paper-plane-o"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div id="subscribe-msg"></div>
-                                    </form>
-                                </div>
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>© Copyright
-                                        <a href="#">Themesflat</a>
-                                        2017. All Rights Reserved.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.container -->
-                </div><!-- /.footer-widgets -->
+                    </div>
+                </div>
             </footer>
+            <a class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <div id="site-off-canvas">
+                <span class="close"></span>
+                <div class="wrapper">
+                    <div class="widget widget_search">
+                        <form role="search" method="get" class="search-form" action="#">
+                            <label>
+                                <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                            </label>
+                            <input type="submit" class="search-submit" value="Search">
+                        </form>
+                    </div><!-- /.widget-search -->
+
+                    <div id="nav_menu-2" class="widget widget-categories">
+                        <h4 class="widget-title">Extra Pages</h4>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="blog-single.html">Blog Single</a>
+                            </li>
+                            <li>
+                                <a href="#">Left Sidebar</a>
+                            </li>
+                            <li>
+                                <a href="#">Right Sidebar</a>
+                            </li>
+                            <li>
+                                <a href="#">Full Width</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
