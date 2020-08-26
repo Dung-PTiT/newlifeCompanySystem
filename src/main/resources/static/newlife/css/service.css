@@ -1,0 +1,56 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 554px;
+}
+
+.image-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    display: block;
+    background: rgba(41, 41, 41, 0.6);
+}
+
+#bg-image-1 {
+    width: 100vw;
+    height: 550px !important;
+}
+
+.div-image-service {
+    margin-bottom: 0 !important;
+}
+
+.div-title-service {
+    margin: 0;
+    font-size: 14px !important;
+}
+
+.div-content-service {
+    background-color: #ffffff;
+    padding: 30px 30px 19px 19px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .12), 1px 1px 1px rgba(0, 0, 0, .24);
+}
+
+.card-feature {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.div-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-holder {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.img-holder:hover {
+    transform: scale(1.3);
+}

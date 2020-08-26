@@ -1,0 +1,25 @@
+.header-text {
+    color: #ffffff !important;
+}
+
+.menu-row{
+    margin-left: 9vw;
+}
+
+.menu-main{
+    margin-top: 1%;
+}
+
+.menu-logo{
+    margin-bottom: 3%;
+}
+
+.menu-company{
+    margin-left: 4%;
+    font-size: 18px;
+}
+
+.menu-ul{
+    text-align: left !important;
+    margin-left: 10vw !important;
+}

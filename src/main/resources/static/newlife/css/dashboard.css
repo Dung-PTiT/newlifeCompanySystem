@@ -1,7 +1,3 @@
-.header-text {
-    color: #ffffff !important;
-}
-
 .image-container {
     position: relative;
     width: 100%;
@@ -52,6 +48,17 @@
     margin-top: 49px;
     margin-left: 197px;
     margin-bottom: 74px;
+    overflow: hidden;
+    position: relative;
+}
+.img-holder{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.img-holder:hover {
+    transform: scale(1.3);
 }
 
 .div-image-service {
@@ -79,4 +86,15 @@
 }
 .icon-service{
     padding-left: 10px;
+}
+
+.card-service{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.test-img:hover{
+    vertical-align: middle;
+    transition: all ease-in-out 0.4s;
+    width: 100%;
 }

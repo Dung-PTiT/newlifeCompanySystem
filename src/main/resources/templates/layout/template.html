@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
         <meta name="author" content="themesflat.com">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.css}">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/style.css}">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">
@@ -38,26 +38,26 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">
         </script>
+        <link rel="stylesheet" type="text/css" th:href="@{/newlife/css/template.css}">
     </head>
     <body class="header_sticky">
         <div class="boxed">
             <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
-                <div class="row" style="margin-left: 9vw">
+                <div class="row menu-row">
                     <div class="header-wrap clearfix">
-                        <div class="col-md-1" style="margin-top: 1%">
+                        <div class="col-sm-1 col-md-1 menu-main">
                             <div id="logo" class="logo">
                                 <a th:href="@{/dashboard}" rel="home">
-                                    <img th:src="@{/newlife/images/logoNewlife.png}" alt="image"
-                                         style="margin-bottom: 3%">
-                                    <span class="header-text" style="margin-left: 4%; font-size: 18px">NEWLIFE</span>
+                                    <img th:src="@{/newlife/images/logoNewlife.png}" alt="image" class="menu-logo">
+                                    <span class="header-text menu-company">NEWLIFE</span>
                                 </a>
-                            </div><!-- /.logo -->
+                            </div>
                         </div>
-                        <div class="col-md-11">
+                        <div class="col-sm-11 col-md-11">
                             <div class="nav-wrap">
                                 <nav id="mainnav" class="mainnav">
-                                    <ul class="menu" style="text-align: left">
-                                        <li class="home" style="margin-left: 10vw;">
+                                    <ul class="menu menu-ul">
+                                        <li class="home">
                                             <a th:href="@{/dashboard}" class="header-text">Home</a>
                                             <ul class="submenu">
                                                 <li>
@@ -74,7 +74,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#" class="header-text">Services</a>
+                                            <a th:href="@{/service}" class="header-text">Services</a>
                                             <ul class="submenu">
                                                 <li>
                                                     <a href="#" class="header-text">Services 01</a>
@@ -105,6 +105,9 @@
                                         </li>
                                     </ul>
                                 </nav>
+                            </div>
+                            <div class="btn-menu">
+                                <span></span>
                             </div>
                         </div>
                     </div>
@@ -146,7 +149,7 @@
                                             <a href="#">About us</a>
                                         </li>
                                         <li>
-                                            <a href="#">Services</a>
+                                            <a th:href="@{/service}">Services</a>
                                         </li>
                                         <li>
                                             <a href="#">Contact us</a>
