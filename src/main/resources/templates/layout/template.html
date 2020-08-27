@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.css}">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/style.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">
+        <!--        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">-->
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/colors/color1.css}" id="colors">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/animate.css}">
         <link th:href="@{/icon/apple-touch-icon-48-precomposed.html}" rel="apple-touch-icon-precomposed" sizes="48x48">
@@ -38,14 +38,15 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">
         </script>
+        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
         <link rel="stylesheet" type="text/css" th:href="@{/newlife/css/template.css}">
     </head>
     <body class="header_sticky">
         <div class="boxed">
             <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
                 <div class="row menu-row">
-                    <div class="header-wrap clearfix">
-                        <div class="col-sm-1 col-md-1 menu-main">
+                    <div class="clearfix">
+                        <div class="col-3 col-sm-3 col-md-1 menu-main row">
                             <div id="logo" class="logo">
                                 <a th:href="@{/dashboard}" rel="home">
                                     <img th:src="@{/newlife/images/logoNewlife.png}" alt="image" class="menu-logo">
@@ -53,7 +54,10 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-sm-11 col-md-11">
+                        <div class="col-9 col-sm-9 col-md-11 btn-menu">
+                            <span></span>
+                        </div>
+                        <div class="col-9 col-sm-9 col-md-11">
                             <div class="nav-wrap">
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu menu-ul">
@@ -106,25 +110,21 @@
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="btn-menu">
-                                <span></span>
-                            </div>
                         </div>
                     </div>
                 </div>
             </header>
             <div layout:fragment="content_body">
             </div>
-            <footer class="footer" style="padding-bottom: 30px">
+            <footer class="footer">
                 <div class="footer-widgets">
                     <div class="container" style="width: 75%;">
                         <div class="row">
-                            <div class="col-md-4" style="margin-top: 45px; color: #ffffff !important;">
+                            <div class="col-xs-12 col-sm-4 footer-contact-info">
                                 <div class="logo logo-footer">
-                                    <a href="#" rel="home">
-                                        <img th:src="@{/newlife/images/logoNewlife.png}" alt="image"
-                                             style="margin-bottom: 3%">
-                                        <span class="header-text" style="margin-left: 4%; font-size: 20px">NEWLIFE
+                                    <a th:href="@{/dashboard}" rel="home">
+                                        <img th:src="@{/newlife/images/logoNewlife.png}" alt="image">
+                                        <span class="header-text">NEWLIFE
                                         </span>
                                     </a>
                                 </div>
@@ -132,13 +132,12 @@
                                 <p>Phone: 091 356 2868</p>
                                 <p>Email: Info@ssmvn.net</p>
                             </div>
-                            <div class="col-md-4" style="padding-left: 0!important;">
+                            <div class="col-xs-12 col-sm-4 footer-map">
                                 <div class="widget widget-newsletter">
-                                    <div id="add_company_map" class="vmap"
-                                         style="height: 250px !important; width: 100%"></div>
+                                    <div id="add_company_map" class="vmap"></div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-xs-12 col-sm-4 footer-link">
                                 <div class="widget widget-services clearfix">
                                     <h5 class="widget-title">Quick Links</h5>
                                     <ul class="one-half">
@@ -217,6 +216,10 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="zalo-chat-widget" data-oaid="1259398921512045854"
+                 data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0"
+                 data-width="300" data-height="370">
             </div>
         </div>
     </body>

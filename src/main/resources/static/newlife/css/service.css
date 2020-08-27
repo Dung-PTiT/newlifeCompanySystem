@@ -54,3 +54,64 @@
 .img-holder:hover {
     transform: scale(1.3);
 }
+
+.banner-title-1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.menu-content {
+    background-color: #E0E0E0;
+    height: 39px;
+    padding-left: 10em;
+    padding-right: 10em;
+    color: #7B7B7B;
+}
+
+.menu-content ul {
+    display: flex;
+    color: #7B7B7B;
+}
+
+.menu-content li {
+    margin: 7px 2.875em;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .banner-title-1 {
+        font-size: 18px !important;
+    }
+
+    .banner-title-2 {
+        font-size: 21px !important;
+    }
+
+    .menu-content li {
+        margin: 7px 2em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .banner-title-1 {
+        font-size: 20px !important;
+    }
+
+    .banner-title-2 {
+        font-size: 26px !important;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .banner-title-1 {
+        font-size: 25px !important;
+    }
+
+    .banner-title-2 {
+        font-size: 31px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

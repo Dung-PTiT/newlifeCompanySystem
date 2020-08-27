@@ -6,8 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" th:href="@{/newlife/css/dashboard.css}">
-    <script th:src="@{/newlife/js/dashboard.js}"></script>
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <script th:src="@{/newlife/js/dashboard.js}"></script>>
 </head>
 <body class="header_sticky">
 <div class="boxed">
@@ -23,7 +22,7 @@
                         </div>
                         <div class="tp-caption sfl title-slide color-white center" data-x="180" data-y="124"
                              data-speed="500" data-start="500" data-easing="Power3.easeInOut">
-                            <h1>Testing & Optimize<br>
+                            <h1 class="banner-title">Testing & Optimize<br>
                                 Management System</h1>
                         </div>
                         <div class="tp-caption element-slider sfb" data-x="800" data-y="330" data-speed="700"
@@ -46,7 +45,7 @@
                         <img th:src="@{/images/slides/slide2.jpg}" alt="slider-image"/>
                         <div class="tp-caption sfl title-slide color-white center" data-x="180" data-y="124"
                              data-speed="500" data-start="500" data-easing="Power3.easeInOut">
-                            <h1>Testing & Optimize<br>
+                            <h1 class="banner-title">Testing & Optimize<br>
                                 Management System</h1>
                         </div>
                         <div class="tp-caption element-slider sfb" data-x="800" data-y="300" data-speed="700"
@@ -66,46 +65,40 @@
                 </ul>
             </div>
         </div>
-
-        <section class="flat-row row-accordion background-color">
-            <div class="containerfluid">
-                <div class="flat-one-half">
-                    <div class="div-image-aboutUS">
-                        <img th:src="@{/newlife/images/image5.png}" alt="content" class="img-holder">
+        <div class="row">
+            <div class="col-xs-6 div-image-aboutUS">
+                <img th:src="@{/newlife/images/image5.png}" alt="content" class="img-holder yy"
+                     style="  max-width: 100%;height: auto;">
+            </div>
+            <div class="col-xs-6">
+                <div class="empty-space height30"></div>
+                <div class="flat-accordion style5">
+                    <div class="title-accordion">
+                        <span>About us</span>
                     </div>
-                </div>
-                <div class="flat-one-half">
-                    <div class="empty-space height30"></div>
-                    <div class="flat-accordion style5">
-                        <div class="title-accordion">
-                            About us
-                        </div>
-                        <div class="flat-toggle" style="padding: 0!important;">
-                            <div class="toggle-content" style="display: block; padding: 0!important;">
-                                <p>Newlife Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem
-                                    Ipsum
-                                    has been the industry’s standard dummy text ever since the 1500s, when an unknown
-                                    printer took a galley of type.</p>
-                            </div>
+                    <div class="flat-toggle">
+                        <div class="toggle-content">
+                            <p>Newlife Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem
+                                Ipsum
+                                has been the industry’s standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="flat-row no-paddingbottom" style="padding-top: 0!important; background-color: #D5EAEC">
-            <div style="margin-top: 30px; margin-bottom: 30px; display: flex; flex-wrap: wrap;">
-                <span style="font-size: 20px;color: #004767;margin-left: 14vw;">Our Services</span>
-                <div style="display: flex; align-items: center; margin-left: 58vw">
+        </div>
+        <section class="flat-row no-paddingbottom">
+            <div class="header-service">
+                <span>Our Services</span>
+                <div>
                     <a href="#">All Services</a>
                     <i class="fa fa-chevron-right" style="margin-left: 7px; color:dodgerblue"></i>
                 </div>
-
             </div>
             <div class="container" style="width: 67%">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="iconbox images card-service">
                             <div class="box-header div-image-service">
                                 <img th:src="@{/newlife/images/image20.png}" alt="icon">
@@ -124,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="iconbox images card-service">
                             <div class="box-header div-image-service">
                                 <img th:src="@{/newlife/images/image22.png}" alt="icon">
@@ -143,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="iconbox images card-service">
                             <div class="box-header div-image-service">
                                 <img th:src="@{/newlife/images/image21.png}" alt="icon">
@@ -164,7 +157,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="iconbox images card-service">
                             <div class="box-header div-image-service">
                                 <img th:src="@{/newlife/images/image25.png}" alt="icon">
@@ -184,7 +177,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="iconbox images card-service">
                             <div class="box-header div-image-service">
                                 <img th:src="@{/newlife/images/image23.png}" alt="icon">
@@ -203,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="iconbox images card-service">
                             <div class="box-header div-image-service">
                                 <img th:src="@{/newlife/images/image26.png}" alt="icon">
@@ -225,15 +218,12 @@
                 </div>
             </div><!-- /.container -->
         </section>
-        <section class="flat-row" style="padding-top: 70px!important; padding-bottom: 140px!important;">
+        <section class="flat-row"
+                 style="padding-top: 70px!important; padding-bottom: 140px!important; background-color: #ffffff">
             <div class="container" style="width: 70%">
                 <img th:src="@{/newlife/images/image18.png}" alt="content">
             </div><!-- /.container -->
         </section>
-        <div class="zalo-chat-widget" data-oaid="1259398921512045854"
-             data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0"
-             data-width="300" data-height="370">
-        </div>
     </div>
 </div>
 </body>
