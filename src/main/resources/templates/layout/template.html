@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.css}">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/style.css}">
         <!--        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">-->
+        <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/revolution-slider.css}">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/colors/color1.css}" id="colors">
         <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/animate.css}">
         <link th:href="@{/icon/apple-touch-icon-48-precomposed.html}" rel="apple-touch-icon-precomposed" sizes="48x48">
@@ -31,6 +32,7 @@
         <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.tools.min.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/jquery.themepunch.revolution.min.js}"></script>
         <script type="text/javascript" th:src="@{/javascript/slider.js}"></script>
+
         <link rel="stylesheet" type="text/css"
               href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
@@ -41,7 +43,7 @@
         <script src="https://sp.zalo.me/plugins/sdk.js"></script>
         <link rel="stylesheet" type="text/css" th:href="@{/newlife/css/template.css}">
     </head>
-    <body class="header_sticky">
+    <body class="header_sticky" style="margin-top: -25px">
         <div class="boxed">
             <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
                 <div class="row menu-row">
@@ -49,7 +51,7 @@
                         <div class="col-3 col-sm-3 col-md-1 menu-main row">
                             <div id="logo" class="logo">
                                 <a th:href="@{/dashboard}" rel="home">
-                                    <img th:src="@{/newlife/images/logoNewlife.png}" alt="image" class="menu-logo">
+                                    <img th:src="@{/newlife/images/logoNewlife.png}" class="menu-logo">
                                     <span class="header-text menu-company">NEWLIFE</span>
                                 </a>
                             </div>
@@ -116,7 +118,7 @@
             </header>
             <div layout:fragment="content_body">
             </div>
-            <footer class="footer">
+            <footer class="footer" style="padding-top: 20px;">
                 <div class="footer-widgets">
                     <div class="container" style="width: 75%;">
                         <div class="row">

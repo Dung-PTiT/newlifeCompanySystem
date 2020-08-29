@@ -65,8 +65,15 @@
 
 .div-image-service {
     margin-bottom: 0 !important;
-    width: 271px !important;
-    height: 148px !important;
+    /*width: 271px !important;*/
+    /*height: 148px !important;*/
+}
+
+.div-image-service img {
+    margin-bottom: 0 !important;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .div-content-service {
@@ -133,6 +140,36 @@
     display: flex;
     align-items: center;
     margin-left: 58vw;
+}
+
+
+.div-benefits {
+    width: 80%;
+}
+
+.div-benefits .row {
+    padding-top: 70px !important;
+    padding-bottom: 80px !important;
+    background-color: #ffffff;
+}
+
+.div-benefits p {
+    color: #4f6676;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+.div-benefits i {
+    color: #00aeff;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.div-benefits h6 {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 767px) {

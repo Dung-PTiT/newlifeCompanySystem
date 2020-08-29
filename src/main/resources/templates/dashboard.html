@@ -6,9 +6,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" th:href="@{/newlife/css/dashboard.css}">
-    <script th:src="@{/newlife/js/dashboard.js}"></script>>
+    <script th:src="@{/newlife/js/dashboard.js}"></script>
+    >
 </head>
-<body class="header_sticky">
+<body>
 <div class="boxed">
     <div layout:fragment="content_body">
         <div class="tp-banner-container" id="home">
@@ -216,14 +217,31 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- /.container -->
+            </div>
         </section>
-        <section class="flat-row"
-                 style="padding-top: 70px!important; padding-bottom: 140px!important; background-color: #ffffff">
-            <div class="container" style="width: 70%">
-                <img th:src="@{/newlife/images/image18.png}" alt="content">
-            </div><!-- /.container -->
-        </section>
+        <div class="container div-benefits">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6">
+                    <h5 style="font-weight: bold;color: #00aeff">EXCLUSIVE BENEFITS</h5>
+                    <p>You should choose us</p>
+                    <h6>
+                        Lorem ipsum dolor sit amet consul me omittantur
+                        an cum an ignota possitpat illum indoctum
+                        quaerendum
+                    </h6>
+                    <h6 style="border-bottom: 1px solid #4f6676">
+                        <i class="fa fa-angle-right"></i>The membership cards
+                    </h6>
+                    <h6 style="border-bottom: 1px solid #4f6676">
+                        <i class="fa fa-angle-right"></i>Finacials and money back
+                    </h6>
+                    <h6><i class="fa fa-angle-right"></i>Team creation and supports</h6>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6">
+                    <img th:src="@{/newlife/images/demo.png}"/>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

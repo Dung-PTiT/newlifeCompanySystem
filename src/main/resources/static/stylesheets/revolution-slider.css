@@ -1806,7 +1806,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/small_left.html) no-Repeat top left;
+    /*background: url(../newlife/images/down-arrow-9.png) no-Repeat top left;*/
     width: 19px;
     height: 14px;
     margin-right: 0px;
@@ -1818,7 +1818,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/small_right.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/small_right.html) no-Repeat top left;*/
     width: 19px;
     height: 14px;
     margin-right: 0px;
@@ -1831,7 +1831,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/arrow_left.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/arrow_left.html) no-Repeat top left;*/
     width: 26px;
     height: 26px;
     margin-right: 0px;
@@ -1843,7 +1843,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/arrow_right.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/arrow_right.html) no-Repeat top left;*/
     width: 26px;
     height: 26px;
     margin-right: 0px;
@@ -1855,8 +1855,7 @@ img.tp-slider-alternative-image {
 .tp-leftarrow.navbar {
     z-index: 100;
     cursor: pointer;
-    position: relative;
-    background: url(/../assets/revolution-slider/small_left_boxed.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/small_left_boxed.html) no-Repeat top left;*/
     width: 20px;
     height: 15px;
     float: left;
@@ -1868,7 +1867,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/small_right_boxed.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/small_right_boxed.html) no-Repeat top left;*/
     width: 20px;
     height: 15px;
     float: left;
@@ -1881,7 +1880,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/arrowleft.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/arrowleft.html) no-Repeat top left;*/
     width: 9px;
     height: 16px;
     float: left;
@@ -1893,7 +1892,7 @@ img.tp-slider-alternative-image {
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/arrowright.html) no-Repeat top left;
+    /*background: url(/../assets/revolution-slider/arrowright.html) no-Repeat top left;*/
     width: 9px;
     height: 16px;
     float: left;
@@ -3625,11 +3624,11 @@ img.tp-slider-alternative-image {
 .tp-rightarrow.square:before {
 
     position: absolute;
-    content: "\e605";
+    content: "\f053";
     left: 19px;
     top: 19px;
     color: #fff;
-    font-family: 'simple-line-icons';
+    font-family: FontAwesome;
     font-size: 28px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -3639,7 +3638,7 @@ img.tp-slider-alternative-image {
 }
 
 .tp-rightarrow.square:before {
-    content: "\e606";
+    content: "\f054";
 }
 
 .tp-leftarrow.square:hover,
