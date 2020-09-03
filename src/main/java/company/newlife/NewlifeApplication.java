@@ -67,14 +67,15 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
         http.csrf().disable();
         //request hop le
         http.authorizeRequests()
-                .antMatchers("/**").permitAll()
+                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**").permitAll()
+                .antMatchers("/admin").hasRole("ADMIN")
                 .and().exceptionHandling().accessDeniedPage("/access-denied-role");
         http.authorizeRequests().and()
                 .formLogin()
                 .loginPage("/login").loginProcessingUrl("/login")
                 .usernameParameter("username").passwordParameter("password")
                 .failureUrl("/loginError").successHandler(urlAuthenSuccessHandler)
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/login")
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/dashboard")
                 .deleteCookies("JSESSIONID").invalidateHttpSession(true);
     }
 

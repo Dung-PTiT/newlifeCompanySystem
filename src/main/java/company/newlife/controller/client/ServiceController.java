@@ -1,4 +1,4 @@
-package company.newlife.controller;
+package company.newlife.controller.client;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +8,6 @@ public class ServiceController {
 
     @GetMapping("/service")
     public String goToService() {
-        return "service";
+        return "client/service";
     }
 }

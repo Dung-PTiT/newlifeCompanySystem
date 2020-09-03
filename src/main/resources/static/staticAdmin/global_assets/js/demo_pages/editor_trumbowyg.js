@@ -52,7 +52,7 @@ var Trumbowyg = function() {
                 ['insertAudio'],
                 ['noembed'],
                 ['preformatted'],
-                ['templates.layout.template'],
+                ['templates.client.template'],
                 ['upload'],
                 ['fullscreen']
             ],

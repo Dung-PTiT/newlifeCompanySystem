@@ -1,4 +1,4 @@
-package company.newlife.controller;
+package company.newlife.controller.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return "admin/login";
     }
 
     @GetMapping("/loginError")
     public String login(HttpServletRequest request, Model model) {
         String errorMessage = "Tên tài khoản hoặc mật khẩu không đúng";
         model.addAttribute("errorMessage", errorMessage);
-        return "login";
+        return "admin/login";
     }
 
     @GetMapping("/access-denied-role")

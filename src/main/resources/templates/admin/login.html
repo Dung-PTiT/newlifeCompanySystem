@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Đăng nhập</title>
+    <title>Login</title>
     <link th:href="@{/staticAdmin/global_assets/css/icons/icomoon/styles.min.css}" rel="stylesheet" type="text/css">
     <link th:href="@{/staticAdmin/assets/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
     <link th:href="@{/staticAdmin/assets/css/bootstrap_limitless.min.css}" rel="stylesheet" type="text/css">
@@ -20,7 +20,7 @@
     <script th:src="@{/staticAdmin/global_assets/js/demo_pages/login.js}"></script>
 </head>
 <body>
-<div class="page-content login-cover">
+<div class="page-content login-cover" style="background-color: #273039">
     <div class="content-wrapper">
         <div class="content d-flex justify-content-center align-items-center">
             <form class="login-form wmin-sm-400" th:action="@{/login}" method="post">
@@ -28,22 +28,22 @@
                     <ul class="nav nav-tabs nav-justified alpha-grey mb-0">
                         <li class="nav-item"><a href="#login-tab1" class="nav-link border-y-0 border-left-0 active"
                                                 data-toggle="tab"><h4 class="my-1 font-weight-bold"
-                                                                      style="color: #009799">ĐĂNG NHẬP HỆ THỐNG</h4></a>
+                                                                      style="color: #009799">WELCOME TO NEWLIFE</h4></a>
                         </li>
                     </ul>
                     <div class="tab-content card-body">
                         <div class="tab-pane fade show active" id="login-tab1">
                             <div class="text-center mb-3">
-                                <i class="icon-reading icon-2x text-slate-400 border-slate-400 border-3 rounded-round p-3 mb-3 mt-1"></i>
+                                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}">
                             </div>
                             <div class="form-group form-group-feedback form-group-feedback-left">
-                                <input type="text" class="form-control" placeholder="Tên tài khoản" name="username">
+                                <input type="text" class="form-control" placeholder="Username" name="username">
                                 <div class="form-control-feedback">
                                     <i class="icon-user text-muted"></i>
                                 </div>
                             </div>
                             <div class="form-group form-group-feedback form-group-feedback-left">
-                                <input type="password" class="form-control pwd" placeholder="Mật khẩu" name="password">
+                                <input type="password" class="form-control pwd" placeholder="Password" name="password">
                                 <div class="form-control-feedback">
                                     <i class="icon-lock2 text-muted"></i>
                                 </div>
@@ -57,10 +57,9 @@
                             </div>
                             <div class="alert text-danger" th:if="${errorMessage}" th:text="${errorMessage}"></div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
                             </div>
-                            <span class="navbar-text ml-5">&copy; 2020. <span
-                                    class="text-dark">Toms System</span> by <span class="text-dark" target="_blank">Newlife Technology</span></span>
+                            <span class="navbar-text ml-5">&copy; 2020. Design by <span><a th:href="@{/dashboard}">Newlife Company</a></span></span>
                         </div>
                     </div>
                 </div>
