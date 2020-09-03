@@ -1,0 +1,4 @@
+company\newlife\model\User.class
+company\newlife\controller\DashboardController.class
+company\newlife\controller\ServiceController.class
+company\newlife\NewlifeApplication.class
