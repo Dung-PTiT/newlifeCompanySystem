@@ -20,23 +20,23 @@
     <script th:src="@{/staticAdmin/global_assets/js/plugins/loaders/blockui.min.js}"></script>
     <script th:src="@{/staticAdmin/global_assets/js/plugins/ui/ripple.min.js}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script th:src="@{/global_assets/js/plugins/visualization/d3/d3.min.js}"></script>
-    <script th:src="@{/global_assets/js/plugins/visualization/d3/d3_tooltip.js}"></script>
-    <script th:src="@{/global_assets/js/plugins/forms/styling/switchery.min.js}"></script>
-    <script th:src="@{/global_assets/js/plugins/ui/moment/moment.min.js}"></script>
-    <script th:src="@{/global_assets/js/plugins/pickers/daterangepicker.js}"></script>
-    <script th:src="@{/assets/js/app.js}"></script>
-    <script th:src="@{/global_assets/js/demo_pages/dashboard.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/streamgraph.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/sparklines.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/lines.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/areas.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/donuts.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/bars.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/progress.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/heatmaps.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/pies.js}"></script>
-    <script th:src="@{/global_assets/js/demo_charts/pages/dashboard/light/bullets.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/plugins/visualization/d3/d3.min.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/plugins/visualization/d3/d3_tooltip.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/plugins/forms/styling/switchery.min.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/plugins/ui/moment/moment.min.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/plugins/pickers/daterangepicker.js}"></script>
+    <script th:src="@{/staticAdmin/assets/js/app.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_pages/dashboard.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/streamgraph.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/sparklines.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/lines.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/areas.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/donuts.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/bars.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/progress.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/heatmaps.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/pies.js}"></script>
+    <script th:src="@{/staticAdmin/global_assets/js/demo_charts/pages/dashboard/light/bullets.js}"></script>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
@@ -52,10 +52,9 @@
 <div class="navbar navbar-expand-md navbar-light navbar-static">
     <!-- Header with logos -->
     <div class="navbar-header navbar-dark d-none d-md-flex align-items-md-center" style="background-color: #273039;">
-        <div class="navbar-brand navbar-brand-md">
-            <a href="#">
-                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="" class="ml-5">
-            </a>
+        <div class="navbar-brand navbar-brand-md" style="display: flex">
+            <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="" class="ml-4">
+            <h6 class="ml-3">Newlife Admin</h6>
         </div>
         <div class="navbar-brand navbar-brand-xs">
             <a href="#" class=" d-inline-block">
@@ -83,40 +82,20 @@
     <!-- Navbar content -->
     <div class="collapse navbar-collapse" id="navbar-mobile">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
-                    <i class="icon-paragraph-justify3"></i>
-                </a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--                <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">-->
+<!--                    <i class="icon-paragraph-justify3"></i>-->
+<!--                </a>-->
+<!--            </li>-->
         </ul>
         <ul class="align-self-center justify-content-center ml-md-1 mr-md-auto">
             <form class="d-flex align-items-end flex-nowrap flex-xl-nowrap">
             </form>
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
-                    <i class="icon-bell2" data-toggle="tooltip" title="Thông báo"></i>
-                    <span class="d-md-none ml-2">Thông báo</span>
-                    <span class="badge badge-mark border-pink-400 ml-auto ml-md-0"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
-                    <div class="dropdown-content-header">
-                        <span class="font-weight-semibold">Thông báo</span>
-                    </div>
-                    <div class="dropdown-content-body dropdown-scrollable">
-                        <ul class="media-list" id="notification_event">
-                        </ul>
-                    </div>
-                    <div class="dropdown-content-footer bg-light">
-                        <a href="#" class="text-black mr-auto" data-toggle="tooltip"
-                           title="Click xem tất cả events">Tất cả sự kiện</a>
-                    </div>
-                </div>
-            </li>
             <li class="nav-item dropdown dropdown-user">
                 <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-                    <img th:src="@{/staticAdmin/global_assets/images/demo/users/face11.jpg}" class="rounded-circle mr-2"
+                    <img th:src="@{/staticAdmin/global_assets/images/demo/users/face1.jpg}" class="rounded-circle mr-2"
                          height="34"
                          alt="">
                 </a>
@@ -156,41 +135,20 @@
                     <!-- Main -->
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="icon-home4" data-toggle="tooltip" title="Trang chủ"></i>
-                            <span>Trang chủ</span>
+                            <i class="icon-home4" data-toggle="tooltip" title="Quản lý dashboard"></i>
+                            <span>Quản lý dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="icon-server" data-toggle="tooltip" title="Quản lý services"></i>
+                            <span>Quản lý services</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link"><i class="icon-copy" data-toggle="tooltip"
-                                                        title="Kết quả thăm dò"></i>
-                            <span>Kết quả thăm dò</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-users" data-toggle="tooltip"
-                                                        title="Quản lý người dùng"></i>
-                            <span>Quản lý người dùng</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-stack" data-toggle="tooltip"
-                                                        title="Phân quyền"></i>
-                            <span>Quản lý quyền</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-color-sampler"
-                                                        data-toggle="tooltip"
-                                                        title="Cấu hình sự kiện"></i> <span>Cấu hình sự kiện</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-stack" data-toggle="tooltip"
-                                                        title="Dịch vụ nhà mạng"></i> <span>Dịch vụ nhà mạng</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-stack" data-toggle="tooltip"
-                                                        title="Dịch vụ nhà mạng 1"></i> <span>Dịch vụ nhà mạng 1</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-stack" data-toggle="tooltip"
-                                                        title="Dịch vụ nhà mạng 2"></i> <span>Dịch vụ nhà mạng 2</span></a>
+                                                        title="Quản lý user"></i>
+                            <span>Quản lý user</span></a>
                     </li>
                 </ul>
             </div><!-- /main navigation -->
