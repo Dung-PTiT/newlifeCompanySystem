@@ -72,7 +72,7 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
         //request hop le
         http.authorizeRequests()
                 .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**").permitAll()
-                .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/admin/**").hasAnyRole("ADMIN","USER")
                 .and().exceptionHandling().accessDeniedPage("/access-denied-role");
         http.authorizeRequests().and()
                 .formLogin()

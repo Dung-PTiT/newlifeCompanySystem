@@ -27,9 +27,9 @@
                     <label for="groupProbeIDFilter" class="mt-2 mr-2"><i class="icon-filter3"></i></label>
                     <select class="form-control selectpicker" name="groupProbeIDFilter" id="groupProbeIDFilter"
                             onchange="getUserByRole(this.value)">
-                        <option selected value="0">Tất cả</option>
-                        <option selected value="1">Admin</option>
-                        <option selected value="2">Tác giả</option>
+                        <option selected value="All">Tất cả</option>
+                        <option selected value="ADMIN">Admin</option>
+                        <option selected value="USER">Tác giả</option>
                     </select>
                 </div>
                 <div class="row">
@@ -75,8 +75,8 @@
                                 <div class="form-group">
                                     <label for="role">Quyền</label>
                                     <select class="form-control selectpicker" name="role" id="role">
-                                        <option value="ADMIN">Admin</option>
-                                        <option value="USER">Author</option>
+                                        <option value="ROLE_USER">Author</option>
+                                        <option value="ROLE_ADMIN">Admin</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -107,11 +107,6 @@
                     </div>
                 </div>
             </div>
-            <!--            <script>-->
-            <!--                $(document).ready(function () {-->
-            <!--                    showNotification();-->
-            <!--                });-->
-            <!--            </script>-->
             <script th:src="@{/staticAdmin/js_templates/users.js}"></script>
         </div>
     </section>

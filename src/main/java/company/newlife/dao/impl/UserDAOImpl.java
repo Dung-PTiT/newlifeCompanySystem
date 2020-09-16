@@ -5,10 +5,8 @@ import company.newlife.entity.UserEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.*;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -34,5 +32,42 @@ public class UserDAOImpl implements UserDAO {
         Query query = entityManager.createNativeQuery(sql);
         int IDUser = (Integer) query.getSingleResult();
         return IDUser;
+    }
+
+    @Override
+    public void addUser(UserEntity userEntity) {
+        entityManager.persist(userEntity);
+    }
+
+    @Override
+    public void updateUser(UserEntity userEntity) {
+        entityManager.merge(entityManager);
+    }
+
+    @Override
+    public List<UserEntity> getByRole(String role) {
+        TypedQuery<UserEntity> query = entityManager.createQuery(" select u from UserEntity u where u.role LIKE :roleUser", UserEntity.class);
+        query.setParameter("roleUser", "%" + role + "%");
+        return query.getResultList();
+    }
+
+    @Override
+    public List<UserEntity> getAll() {
+        return entityManager.createQuery("select u from UserEntity u order by u.role", UserEntity.class).getResultList();
+    }
+
+    @Override
+    public void deleteUser(UserEntity userEntity) {
+        entityManager.remove(userEntity);
+        entityManager.close();
+    }
+
+    @Override
+    public UserEntity getByID(Integer userID) {
+        String hql = "select u from UserEntity u where  u.id = :userID";
+        Query query = entityManager.createQuery(hql, UserEntity.class);
+        query.setParameter("userID", userID);
+        entityManager.close();
+        return (UserEntity) query.getSingleResult();
     }
 }

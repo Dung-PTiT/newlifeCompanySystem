@@ -25,7 +25,7 @@ public class UrlAuthenSuccessHandler extends SimpleUrlAuthenticationSuccessHandl
             roles.add(authority.getAuthority());
         }
         String targetUrl;
-        if (roles.contains("ROLE_ADMIN")) {
+        if (roles.contains("ROLE_ADMIN")|| roles.contains("ROLE_USER")) {
             targetUrl = "/admin/manage/user";
             if (response.isCommitted()) {
                 return;
