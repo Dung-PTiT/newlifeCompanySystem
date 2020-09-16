@@ -18,7 +18,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService, UserDetailsService  {
+public class UserServiceImpl implements UserService, UserDetailsService {
     @Autowired
     private UserDAO userDAO;
     @Autowired
@@ -32,6 +32,10 @@ public class UserServiceImpl implements UserService, UserDetailsService  {
             user.setId(userEntity.getId());
             user.setUsername(userEntity.getUsername());
             user.setPassword(userEntity.getPassword());
+            user.setName(userEntity.getName());
+            user.setPhoneNumber(userEntity.getPhoneNumber());
+            user.setEmail(userEntity.getEmail());
+            user.setAddress(userEntity.getAddress());
             user.setRole(userEntity.getRole());
             return user;
         } catch (Exception e) {
@@ -49,6 +53,6 @@ public class UserServiceImpl implements UserService, UserDetailsService  {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
         authorities.add(authority);
 //        return new User(email,userEntity.getPassword(),authorities);
-        return new org.springframework.security.core.userdetails.User(username,userEntity.getPassword(),authorities);
+        return new org.springframework.security.core.userdetails.User(username, userEntity.getPassword(), authorities);
     }
 }

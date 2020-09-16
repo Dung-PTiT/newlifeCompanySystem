@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/template}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <title>Admin Manage User</title>
+</head>
+<body>
+<div class="content">
+    <section class="container-fluid bg-light h-100" layout:fragment="content_body">
+        <div class="card mt-2">
+            <div class=" border-bottom border">
+                <h5 class="card-title ml-2 mt-2 mb-1">Trang quản lý user</h5>
+            </div>
+            <div>
+                <div class="clearfix mt-1 mb-0">
+                    <span class="float-left">
+                        <button type="button" class="btn btn-dark ml-3" onclick="add_user()"
+                                style="padding: 4px 8px 4px 8px;">
+                            <i class="icon-plus-circle2 mr-2"></i>
+                            Thêm mới</button>
+                    </span>
+                </div>
+                <div class="form-group d-flex"
+                     style="margin-left: 81%; width: 15%; margin-bottom: 0; margin-top: -32px;">
+                    <label for="groupProbeIDFilter" class="mt-2 mr-2"><i class="icon-filter3"></i></label>
+                    <select class="form-control selectpicker" name="groupProbeIDFilter" id="groupProbeIDFilter"
+                            onchange="getUserByRole(this.value)">
+                        <option selected value="0">Tất cả</option>
+                        <option selected value="1">Admin</option>
+                        <option selected value="2">Tác giả</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <table class="table  ml-2 mr-2 mt-1" id="usersTable">
+                    </table>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="add_edit_popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="margin-left: 45%;"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="form_add_edit_user">
+                                <div class="form-group" style="display: none">
+                                    <label for="id">UserID</label>
+                                    <input type="number" class="form-control" name="id" id="id"
+                                           aria-describedby="id"
+                                           placeholder="User ID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">Tên tài khoản</label>
+                                    <input type="text" class="form-control" name="username" id="username"
+                                           aria-describedby="username"
+                                           placeholder="Tên tài khoản">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Mật khẩu</label>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                           aria-describedby="password" placeholder="Mật khẩu">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Tên người dùng</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           aria-describedby="name" placeholder="Tên người dùng">
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">Quyền</label>
+                                    <select class="form-control selectpicker" name="role" id="role">
+                                        <option value="ADMIN">Admin</option>
+                                        <option value="USER">Author</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Địa chỉ</label>
+                                    <input type="text" class="form-control" name="address" id="address"
+                                           aria-describedby="address" placeholder="Địa chỉ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" name="email" id="email"
+                                           aria-describedby="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber">Số điện thoại</label>
+                                    <input type="text" class="form-control" name="phoneNumber" id="phoneNumber"
+                                           aria-describedby="phoneNumber" placeholder="Số điện thoại">
+                                </div>
+                                <button type="button" class="btn btn-primary mr-1 float-right"
+                                        onclick='submitForm(this.form)'>Thực hiện
+                                </button>
+                                <button type="button" id="form_close" class="btn btn-secondary mr-1 float-right"
+                                        data-dismiss="modal">Hủy
+                                </button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            <script>-->
+            <!--                $(document).ready(function () {-->
+            <!--                    showNotification();-->
+            <!--                });-->
+            <!--            </script>-->
+            <script th:src="@{/staticAdmin/js_templates/users.js}"></script>
+        </div>
+    </section>
+</div>
+</body>
+</html>

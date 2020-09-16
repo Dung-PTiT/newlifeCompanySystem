@@ -4,6 +4,8 @@ import company.newlife.security.UrlAuthenSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.CacheControl;
@@ -22,6 +24,8 @@ import org.springframework.web.servlet.resource.VersionResourceResolver;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
+@EnableConfigurationProperties
+@EntityScan(basePackages = {"company.newlife.entity"})
 public class NewlifeApplication extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
     @Autowired
@@ -68,7 +72,7 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
         //request hop le
         http.authorizeRequests()
                 .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**").permitAll()
-                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/admin/**").hasRole("ADMIN")
                 .and().exceptionHandling().accessDeniedPage("/access-denied-role");
         http.authorizeRequests().and()
                 .formLogin()
