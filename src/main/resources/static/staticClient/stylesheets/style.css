@@ -1836,7 +1836,7 @@ article .more-link a:hover {
 }
 
 .widget.widget_search .search-form .search-submit {
-    background-image: url(../images/search.svg);
+    /*background-image: url(../images/search.svg);*/
     background-color: transparent;
     background-size: 13px 13px;
     background-position: center right;
@@ -2237,7 +2237,7 @@ input#subscribe-email {
 }
 
 .brochure .btn-download a:after {
-    background: url(../images/common/icon_pdf_white.html) no-repeat;
+    /*background: url(../images/common/icon_pdf_white.html) no-repeat;*/
     content: "";
     width: 30px;
     height: 30px;
@@ -2313,19 +2313,19 @@ input#subscribe-email {
 }
 
 .parallax1 {
-    background-image: url(../images/parallax/bg-parallax1.jpg);
+    background-image: url(./static/staticClient/images/slides/bgParallax1.jpg);
 }
 
 .parallax2 {
-    background-image: url(../images/parallax/bg-parallax2.jpg);
+    background-image: url(./static/staticClient/images/slides/bgParallax2.jpg);
 }
 
 .parallax3 {
-    background-image: url(../images/parallax/bg-parallax3.jpg);
+    background-image: url(./static/staticClient/images/slides/bgParallax3.jpg);
 }
 
 .parallax4 {
-    background-image: url(../images/parallax/bg-parallax4.html);
+    /*background-image: url(../images/parallax/bg-parallax4.html);*/
 }
 
 /* Revolution Slider

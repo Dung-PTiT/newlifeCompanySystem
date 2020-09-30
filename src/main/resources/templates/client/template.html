@@ -1,244 +1,275 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-        <meta name="author" content="themesflat.com">
-        <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
-        <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/bootstrap.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/style.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/revolution-slider.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/animate.css}">
-        <link rel="stylesheet" type="text/css"
-              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/bootstrap.min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.easing.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.cookie.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.fitvids.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/parallax.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.magnific-popup.min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.magnific-popup.min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.flexslider-min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery-validate.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery-countTo.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery-waypoints.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/main.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.tools.min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.revolution.min.js}"></script>
-        <script type="text/javascript" th:src="@{/staticClient/javascript/slider.js}"></script>
-        <link rel="stylesheet" type="text/css"
-              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-        </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">
-        </script>
-        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
-        <link rel="stylesheet" type="text/css" th:href="@{/staticClient/newlife/css/template.css}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/revolution-slider.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/animate.css}">
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.easing.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.cookie.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.fitvids.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/parallax.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.magnific-popup.min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.magnific-popup.min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.flexslider-min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery-validate.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery-countTo.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery-waypoints.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/main.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.tools.min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.revolution.min.js}"></script>
+    <script type="text/javascript" th:src="@{/staticClient/javascript/slider.js}"></script>
+<!--    <link rel="stylesheet" type="text/css"-->
+<!--          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">-->
+<!--    </script>-->
+<!--    <script async defer-->
+<!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">-->
+<!--    </script>-->
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <link th:href="@{/staticClient/newlife/images/logoNewlife.png}" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/newlife/css/template.css}">
 
-        <script>
-            $(document).ready(function () {
-                initMap();
-            });
+    <style>
+        #logoImg {
+            -webkit-animation: spin 2s linear infinite;
+            -moz-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
 
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('add_company_map'), {
-                    zoom: 17,
-                    center: {lat: 21.020309, lng: 105.826360},
-                    disableDefaultUI: true,
-                    fullscreenControl: true,
-                    zoomControl: true
-                });
-                var infowindow = new google.maps.InfoWindow;
+        @keyframes spin {
 
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(21.020309, 105.826360),
-                    map: map
-                });
+            from {
+                transform: rotate(30deg);
             }
-        </script>
-    </head>
-    <body class="header_sticky" style="margin-top: -25px">
-        <div class="boxed">
-            <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
-                <div class="row menu-row">
-                    <div class="clearfix">
-                        <div class="col-3 col-sm-3 col-md-1 menu-main row">
-                            <div id="logo" class="logo">
-                                <a th:href="@{/dashboard}" rel="home">
-                                    <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" class="menu-logo">
-                                    <span class="header-text menu-company">NEWLIFE</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-9 col-sm-9 col-md-11 btn-menu">
-                            <span></span>
-                        </div>
-                        <div class="col-9 col-sm-9 col-md-11">
-                            <div class="nav-wrap">
-                                <nav id="mainnav" class="mainnav">
-                                    <ul class="menu menu-ul">
-                                        <li class="home">
-                                            <a th:href="@{/dashboard}" class="header-text">Home</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="#" class="header-text">Home 01</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+            to {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+    <style>
+        .zs-menu {
+            display: none !important;
+        }
+    </style>
+<!--    <script>-->
+<!--        $(document).ready(function () {-->
+<!--            initMap();-->
+<!--        });-->
+
+<!--        function initMap() {-->
+<!--            var map = new google.maps.Map(document.getElementById('add_company_map'), {-->
+<!--                zoom: 17,-->
+<!--                center: {lat: 21.020309, lng: 105.826360},-->
+<!--                disableDefaultUI: true,-->
+<!--                fullscreenControl: true,-->
+<!--                zoomControl: true-->
+<!--            });-->
+<!--            var infowindow = new google.maps.InfoWindow;-->
+
+<!--            var marker = new google.maps.Marker({-->
+<!--                position: new google.maps.LatLng(21.020309, 105.826360),-->
+<!--                map: map-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
+</head>
+<body class="header_sticky" style="margin-top: -25px">
+<div class="boxed">
+    <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
+        <div class="row menu-row">
+            <div class="clearfix">
+                <div class="col-3 col-sm-3 col-md-1 menu-main row">
+                    <div id="logo" class="logo">
+                        <a th:href="@{/dashboard}" rel="home">
+                            <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" class="menu-logo"
+                                 id="logoImg">
+                            <span class="header-text menu-company">NEWLIFE</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-9 col-sm-9 col-md-11 btn-menu"></div>
+                <div class="col-9 col-sm-9 col-md-11">
+                    <div class="nav-wrap">
+                        <nav id="mainnav" class="mainnav">
+                            <ul class="menu menu-ul">
+                                <li class="home">
+                                    <a th:href="@{/dashboard}" class="header-text">Home</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/service}" class="header-text">Services</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/about}" class="header-text">About</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header-text">JOIN US</a>
+                                    <ul class="submenu">
                                         <li>
-                                            <a href="#" class="header-text">About</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="#" class="header-text">About</a>
-                                                </li>
-                                            </ul>
+                                            <a th:href="@{/login}" class="header-text">Login</a>
                                         </li>
-                                        <li>
-                                            <a th:href="@{/service}" class="header-text">Services</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="#" class="header-text">Services 01</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="header-text">JOIN US</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a th:href="@{/login}" class="header-text">Login</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="header-text">Contact Us</a>
-                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="header-text">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header-text">Blog</a>
+                                    <ul class="submenu right-sub-menu">
                                         <li>
                                             <a href="#" class="header-text">Blog</a>
-                                            <ul class="submenu right-sub-menu">
-                                                <li>
-                                                    <a href="#" class="header-text">Blog</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="header-text">Blog Single</a>
-                                                </li>
-                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header-text">Blog Single</a>
                                         </li>
                                     </ul>
-                                </nav>
-                            </div>
-                        </div>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </header>
-            <div layout:fragment="content_body">
-            </div>
-            <footer class="footer" style="padding-top: 20px;">
-                <div class="footer-widgets">
-                    <div class="container" style="width: 75%;">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4 footer-contact-info">
-                                <div class="logo logo-footer">
-                                    <a th:href="@{/dashboard}" rel="home">
-                                        <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="image">
-                                        <span class="header-text">NEWLIFE
-                                        </span>
-                                    </a>
-                                </div>
-                                <p>Address: Số 5, 33/189 Ô Chợ Dừa Đống Đa Hà Nội</p>
-                                <p>Phone: 091 356 2868</p>
-                                <p>Email: Info@ssmvn.net</p>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 footer-map">
-                                <div class="widget widget-newsletter">
-                                    <div id="add_company_map" class="vmap"></div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 footer-link">
-                                <div class="widget widget-services clearfix">
-                                    <h5 class="widget-title">Quick Links</h5>
-                                    <ul class="one-half">
-                                        <li>
-                                            <a th:href="@{/dashboard}">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">About us</a>
-                                        </li>
-                                        <li>
-                                            <a th:href="@{/service}">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Contact us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Cart</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="one-half">
-                                        <li>
-                                            <a href="#">Shop</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Checkout</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">My Account</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">News</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <a class="go-top">
-                <i class="fa fa-angle-up"></i>
-            </a>
-            <div id="site-off-canvas">
-                <span class="close"></span>
-                <div class="wrapper">
-                    <div class="widget widget_search">
-                        <form role="search" method="get" class="search-form" action="#">
-                            <label>
-                                <input type="search" class="search-field" placeholder="Search …" value="" name="s">
-                            </label>
-                            <input type="submit" class="search-submit" value="Search">
-                        </form>
-                    </div><!-- /.widget-search -->
-
-                    <div id="nav_menu-2" class="widget widget-categories">
-                        <h4 class="widget-title">Extra Pages</h4>
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                                <a href="blog-single.html">Blog Single</a>
-                            </li>
-                            <li>
-                                <a href="#">Left Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">Right Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">Full Width</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="zalo-chat-widget" data-oaid="1259398921512045854"
-                 data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0"
-                 data-width="300" data-height="370">
             </div>
         </div>
-    </body>
+    </header>
+    <div layout:fragment="content_body">
+    </div>
+    <footer class="footer" style="padding-top: 20px;">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 footer-contact-info">
+                        <div class="logo logo-footer">
+                            <a th:href="@{/dashboard}" rel="home">
+                                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="image">
+                                <span class="header-text">NEWLIFE</span>
+                            </a>
+                        </div>
+                        <p><i class="fa fa-address-card" style="color: #11c3f0; padding-right: 20px!important;"></i>Số
+                            5, 33/189 Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+                        <p><i class="fa fa-phone-square" style="color: #11c3f0; padding-right: 23px!important;"></i>091
+                            356 2868</p>
+                        <p><i class="fa fa-mail-forward" style="color: #11c3f0; padding-right: 22px!important;"></i>Info@ssmvn.net
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 footer-contact-info">
+                        <div class="widget widget-services clearfix">
+                            <h5 class="widget-title">Our Serivices</h5>
+                            <ul class="one-half">
+                                <li>
+                                    <a th:href="@{/service}">Service Quality Testing</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/service}">Network Quality Testing</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/service}">Data Analyzer Solution</a>
+                                </li>
+                            </ul>
+                            <ul class="one-half">
+                                <li>
+                                    <a th:href="@{/service}">FTTx Testing</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/service}">PSTN Testing</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/service}">Roaming Quality Analyzer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 footer-contact-info">
+                        <div class="widget widget-services clearfix">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <ul class="one-half">
+                                <li>
+                                    <a th:href="@{/dashboard}">Home</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/service}">Services</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/about}">About us</a>
+                                </li>
+                            </ul>
+                            <ul class="one-half">
+                                <li>
+                                    <a href="#">Join us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="copyright" style="margin-top: 0px!important; background-color: aliceblue">
+                <p style="color: #000000">© Copyright <a th:href="@{/dashboard}" style="color:#119fca">NEWLIFE</a> 2020.
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="go-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <div id="site-off-canvas">
+        <span class="close"></span>
+        <div class="wrapper">
+            <div class="widget widget_search">
+                <form role="search" method="get" class="search-form" action="#">
+                    <label>
+                        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                    </label>
+                    <input type="submit" class="search-submit" value="Search">
+                </form>
+            </div><!-- /.widget-search -->
+
+            <div id="nav_menu-2" class="widget widget-categories">
+                <h4 class="widget-title">Extra Pages</h4>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="blog-single.html">Blog Single</a>
+                    </li>
+                    <li>
+                        <a href="#">Left Sidebar</a>
+                    </li>
+                    <li>
+                        <a href="#">Right Sidebar</a>
+                    </li>
+                    <li>
+                        <a href="#">Full Width</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="zalo-chat-widget" data-oaid="1259398921512045854"
+         data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0"
+         data-width="300" data-height="370">
+    </div>
+</div>
+</body>
 </html>

@@ -59,7 +59,6 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void deleteUser(UserEntity userEntity) {
         entityManager.remove(userEntity);
-        entityManager.close();
     }
 
     @Override
@@ -67,7 +66,6 @@ public class UserDAOImpl implements UserDAO {
         String hql = "select u from UserEntity u where  u.id = :userID";
         Query query = entityManager.createQuery(hql, UserEntity.class);
         query.setParameter("userID", userID);
-        entityManager.close();
         return (UserEntity) query.getSingleResult();
     }
 }

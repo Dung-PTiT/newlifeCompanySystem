@@ -9,7 +9,6 @@ function getAllUsers() {
         type: "POST",
         dataType: "json",
         success: function (data) {
-            console.log(data);
             showUserTable(data);
         }
     });
