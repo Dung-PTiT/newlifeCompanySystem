@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: company.newlife.NewlifeApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.426 s <<< FAILURE! - in company.newlife.NewlifeApplicationTests
-contextLoads  Time elapsed: 0.031 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': Could not bind properties to 'ResourceProperties' : prefix=spring.resources, ignoreInvalidFields=false, ignoreUnknownFields=false; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.resources' to org.springframework.boot.autoconfigure.web.ResourceProperties
-Caused by: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': Could not bind properties to 'ResourceProperties' : prefix=spring.resources, ignoreInvalidFields=false, ignoreUnknownFields=false; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.resources' to org.springframework.boot.autoconfigure.web.ResourceProperties
-Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.resources' to org.springframework.boot.autoconfigure.web.ResourceProperties
-Caused by: org.springframework.boot.context.properties.bind.UnboundConfigurationPropertiesException: The elements [spring.resources.cache-period] were left unbound.
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.185 s - in company.newlife.NewlifeApplicationTests

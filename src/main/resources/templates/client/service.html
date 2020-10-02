@@ -39,14 +39,14 @@
 
         <div class="menu-content">
             <ul>
-                <li><span data-filter="*" href="#">Product Overview</span></li>
-                <li><span data-filter=".builder" href="#">Key Benefits</span></li>
-                <li><span data-filter=".electric" href="#">Features</span></li>
+                <li><a href="#productOverview">Product Overview</a></li>
+                <li><a href="#keyBenefit">Key Benefits</a></li>
+                <li><a href="#feature">Features</a></li>
             </ul>
         </div>
 
-        <div style="padding-left: 12.875em; padding-right: 12.875em;  color: #7B7B7B">
-            <div class="row" style="margin-top:  3.9375em">
+        <div class="div-key-feature">
+            <div class="row" style="margin-top: 3.9375em; scroll-margin-top: 150px;" id="productOverview">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                     <h1>
                         <span style="padding-bottom: 21px; border-bottom: 2px solid #A1A0A0; font-size: 30px">Product Overview</span>
@@ -62,189 +62,184 @@
                         adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua. Utenim ad minim
                         veniam quis nostrud exercitation ullamco laboris.</span>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-6" style="text-align: end;">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
                     <img th:src="@{/staticClient/newlife/images/laptop.png}"/>
                 </div>
             </div>
-            <div>
-                <div class="row" style="margin-top:  6.9375em">
-                    <div class="col-12" style="text-align: center">
-                        <h1>
-                            <span style="border-bottom: 2px solid #A1A0A0; font-size: 30px">Key Benefits</span>
-                        </h1>
-                    </div>
+            <div class="row" style="margin-top:  4.4375em; margin-bottom: 1.4375em">
+                <div class="col-12" style="text-align: center">
+                    <h1>
+                        <span style="border-bottom: 2px solid #A1A0A0; font-size: 30px">Key Benefits</span>
+                    </h1>
                 </div>
-                <div class="row" style="margin-top:  4.4375em">
-                    <div class="col-md-6 card-fade-in-scroll">
-                        <div class="row">
-                            <div class="col-md-3" style="text-align: end;">
-                                <img th:src="@{/staticClient/newlife/images/www.png}" atl="slider-image"/>
-                            </div>
-                            <div class="col-md-9">
-                                <h2 style="color: #000000">
-                                    Work from anywhere
-                                </h2>
-                                <br>
-                                <h6>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
-                                    exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
-                                    adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
-                                    Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris.
-                                </h6>
-                            </div>
+            </div>
+            <div class="row" id="keyBenefit" style="scroll-margin-top: 190px;">
+                <div class="col-md-6 card-fade-in-scroll">
+                    <div class="row">
+                        <div class="col-md-3" style="text-align: center;">
+                            <img th:src="@{/staticClient/newlife/images/www.png}" atl="slider-image"/>
                         </div>
-                    </div>
-                    <div class="col-md-6 card-fade-in-scroll">
-                        <div class="row">
-                            <div class="col-md-3" style="text-align: end;">
-                                <img th:src="@{/staticClient/newlife/images/process.png}" atl="slider-image"/>
-                            </div>
-                            <div class="col-md-9">
-                                <h2 style="color: #000000">
-                                    Auto identify network issues
-                                </h2>
-                                <br>
-                                <h6>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                </h6>
-                            </div>
+                        <div class="col-md-9">
+                            <h2 style="color: #000000">
+                                Work from anywhere
+                            </h2>
+                            <br>
+                            <h6>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
+                                exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
+                                adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
+                                Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris.
+                            </h6>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top:  4.4375em">
-                    <div class="col-md-6 card-fade-in-scroll">
-                        <div class="row">
-                            <div class="col-md-3" style="text-align: end;">
-                                <img th:src="@{/staticClient/newlife/images/effective.png}" atl="slider-image"/>
-                            </div>
-                            <div class="col-md-9">
-                                <h2 style="color: #000000">
-                                    Reduce analyzer time
-                                </h2>
-                                <br>
-                                <h6>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                </h6>
-                            </div>
+                <div class="col-md-6 card-fade-in-scroll">
+                    <div class="row">
+                        <div class="col-md-3" style="text-align: center;">
+                            <img th:src="@{/staticClient/newlife/images/process.png}" atl="slider-image"/>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 style="color: #000000">
+                                Auto identify network issues
+                            </h2>
+                            <br>
+                            <h6>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                            </h6>
                         </div>
                     </div>
-                    <div class="col-md-6 card-fade-in-scroll">
-                        <div class="row">
-                            <div class="col-md-3" style="text-align: end;">
-                                <img th:src="@{/staticClient/newlife/images/outline.png}" atl="slider-image"/>
-                            </div>
-                            <div class="col-md-9">
-                                <h2 style="color: #000000">
-                                    Work more effective
-                                </h2>
-                                <br>
-                                <h6>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                </h6>
-                            </div>
+                </div>
+                <div class="col-md-6 card-fade-in-scroll">
+                    <div class="row">
+                        <div class="col-md-3" style="text-align: center;">
+                            <img th:src="@{/staticClient/newlife/images/effective.png}" atl="slider-image"/>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 style="color: #000000">
+                                Reduce analyzer time
+                            </h2>
+                            <br>
+                            <h6>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 card-fade-in-scroll">
+                    <div class="row">
+                        <div class="col-md-3" style="text-align: center;">
+                            <img th:src="@{/staticClient/newlife/images/outline.png}" atl="slider-image"/>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 style="color: #000000">
+                                Work more effective
+                            </h2>
+                            <br>
+                            <h6>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                            </h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="row" style="margin-top:  6.9375em">
-                    <div class="col-12" style="text-align: center">
-                        <h1>
-                            <span style="border-bottom: 2px solid #A1A0A0; font-size: 30px">Feature</span>
-                        </h1>
+            <div class="row" style="margin-top:  6.9375em; margin-bottom: 4.4375em; scroll-margin-top: 150px;"
+                 id="feature">
+                <div class="col-12" style="text-align: center">
+                    <h1>
+                        <span style="border-bottom: 2px solid #A1A0A0; font-size: 30px">Feature</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top:  4.4375em">
+                <div class="col-xs-12 col-md-4">
+                    <div class="iconbox images card-feature">
+                        <div class="div-image">
+                            <img th:src="@{/staticClient/newlife/images/feature1.png}" alt="icon"
+                                 class="img-holder">
+                        </div>
+                        <div class="box-content div-content-service">
+                            <div class="box-title div-title-service">
+                                <span>Automate Report Generation</span>
+                            </div>
+                            <p>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
+                                exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
+                                adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
+                                Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top:  4.4375em">
-                    <div class="col-md-4">
-                        <div class="iconbox images card-feature">
-                            <div class="div-image">
-                                <img th:src="@{/staticClient/newlife/images/feature1.png}" alt="icon"
-                                     class="img-holder">
+                <div class="col-xs-12 col-md-4">
+                    <div class="iconbox images card-feature">
+                        <div class="div-image">
+                            <img th:src="@{/staticClient/newlife/images/feature2.png}" alt="icon"
+                                 class="img-holder">
+                        </div>
+                        <div class="box-content div-content-service">
+                            <div class="box-title div-title-service">
+                                <span>Automate Route Adjustment</span>
                             </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <span>Automate Report Generation</span>
-                                </div>
-                                <p>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
-                                    exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
-                                    adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
-                                    Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                </p>
-                            </div>
+                            <p>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
+                                exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
+                                adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
+                                Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                            </p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="iconbox images card-feature">
-                            <div class="div-image">
-                                <img th:src="@{/staticClient/newlife/images/feature2.png}" alt="icon"
-                                     class="img-holder">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <span>Automate Route Adjustment</span>
-                                </div>
-                                <p>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
-                                    exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
-                                    adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
-                                    Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                </p>
-                            </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="iconbox images card-feature">
+                        <div class="div-image">
+                            <img th:src="@{/staticClient/newlife/images/feature3.png}" alt="icon"
+                                 class="img-holder">
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="iconbox images card-feature">
-                            <div class="div-image">
-                                <img th:src="@{/staticClient/newlife/images/feature3.png}" alt="icon"
-                                     class="img-holder">
+                        <div class="box-content div-content-service">
+                            <div class="box-title div-title-service">
+                                <span>Analyze on servers</span>
                             </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <span>Analyze on servers</span>
-                                </div>
-                                <p>
-                                    Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
-                                    incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
-                                    exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
-                                    adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
-                                    Utenim ad minim
-                                    veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
-                                    aliqua. Utenim ad minim
-                                </p>
-                            </div>
+                            <p>
+                                Newlife Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor
+                                incididunt utlabore et doloremagna aliqua. Utenim ad minim veniam quis nostrud
+                                exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet consectetur
+                                adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna aliqua.
+                                Utenim ad minim
+                                veniam quis nostrud exercitation ullamco laboris. Newlife Lorem ipsum dolor sit amet
+                                consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et doloremagna
+                                aliqua. Utenim ad minim
+                            </p>
                         </div>
                     </div>
                 </div>

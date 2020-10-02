@@ -11,7 +11,7 @@
     <section class="container-fluid bg-light h-100" layout:fragment="content_body">
         <div class="card mt-2">
             <div class=" border-bottom border">
-                <h5 class="card-title ml-2 mt-2 mb-1">Trang quản lý user</h5>
+                <h5 class="card-title ml-2 mt-2 mb-1">Bảng thông tin tài khoản</h5>
             </div>
             <div>
                 <div class="clearfix mt-1 mb-0">
@@ -19,7 +19,7 @@
                         <button type="button" class="btn btn-dark ml-3" onclick="add_user()"
                                 style="padding: 4px 8px 4px 8px;">
                             <i class="icon-plus-circle2 mr-2"></i>
-                            Thêm mới</button>
+                            <span>Thêm mới</span></button>
                     </span>
                 </div>
                 <div class="form-group d-flex"
@@ -33,7 +33,7 @@
                     </select>
                 </div>
                 <div class="row">
-                    <table class="table  ml-2 mr-2 mt-1" id="usersTable">
+                    <table class="table mr-2 mt-1" id="usersTable">
                     </table>
                 </div>
             </div>
@@ -43,9 +43,9 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel" style="margin-left: 45%;"></h5>
+                            <h5 class="modal-title" id="exampleModalLabel" style="margin-left: 38%;"></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true" class="text-danger-800 font-weight-bold">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -75,7 +75,7 @@
                                 <div class="form-group">
                                     <label for="role">Quyền</label>
                                     <select class="form-control selectpicker" name="role" id="role">
-                                        <option value="ROLE_USER">Author</option>
+                                        <option value="ROLE_USER">Tác giả</option>
                                         <option value="ROLE_ADMIN">Admin</option>
                                     </select>
                                 </div>

@@ -15,7 +15,7 @@ function getAllUsers() {
 }
 
 function add_user() {
-    $('#exampleModalLabel').html("Thêm user");
+    $('#exampleModalLabel').html("Thêm tài khoản");
     $('#username').val("");
     $("#password").val("");
     $('#name').val("");
@@ -30,10 +30,11 @@ function add_user() {
 }
 
 function edit_user(userID, username, password, name, role, email, phoneNumber, address) {
-    $('#exampleModalLabel').html("Cập nhật Event");
+    $('#exampleModalLabel').html("Cập nhật thông tin tài khoản");
     $('#id').attr("readonly", true);
     $("#id").val(userID);
     $("#username").val(username);
+    $("#name").val(name);
     $("#password").val(password);
     $('#email').val(email);
     $('#phoneNumber').val(phoneNumber);
@@ -65,8 +66,7 @@ function submitForm(form) {
 
 function delete_user(userID) {
     swal({
-            title: "Xác nhận",
-            text: "Thực hiện xóa dự kiện này?",
+            title: "Xóa tài khoản này?",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -121,29 +121,36 @@ function showUserTable(data) {
     var tr_event_table = '<tr class="row-user-table"><td colspan="3"><table class="table table-bordered">'
         + '<tr class="bg-light" style="text-align: center;">'
         + '<th>STT</th>'
-        + '<th>Tên TK</th>'
-        + '<th style="text-align: center;">Tên user</th>'
+        + '<th>Tên tài khoản</th>'
+        + '<th style="text-align: center;">Tên người dùng</th>'
         + '<th style="text-align: center;">Quyền</th>'
         + '<th style="text-align: center;">Email</th>'
-        + '<th style="text-align: center;">Số ĐT</th>'
+        + '<th style="text-align: center;">Số điện thoại</th>'
         + '<th style="text-align: center;">Địa chỉ</th>'
         + '<th style="text-align: center;">Tác vụ</th>'
         + '</tr>';
     var stt = 0;
     for (var element in data) {
         stt++;
+        var roleUser = "";
+        if(data[element].role == "ROLE_ADMIN"){
+            roleUser = "Admin";
+        }
+        if(data[element].role == "ROLE_USER"){
+            roleUser = "Tác giả";
+        }
         tr_event_table = tr_event_table +
             '<tr>'
             + '<td style="text-align: center;">' + stt + '</td>'
             + '<td style="text-align: center;">' + data[element].username + '</td>'
             + '<td style="text-align: center;">' + data[element].name + '</td>'
-            + '<td style="text-align: center;">' + data[element].role + '</td>'
+            + '<td style="text-align: center;">' + roleUser + '</td>'
             + '<td style="text-align: center;">' + data[element].email + '</td>'
             + '<td style="text-align: center;">' + data[element].phoneNumber + '</td>'
             + '<td style="text-align: center;">' + data[element].address + '</td>'
             + '<td><div class="list-icons">' +
-            '<button class="btn-group list-icons-item text-primary-600" data-toggle="tooltip" title="Sửa" onclick="edit_user(' + data[element].id + ',' + data[element].username + ',' + data[element].password + ',' + data[element].name + ',' + data[element].role + ',' + data[element].email + ',' + data[element].phoneNumber + ',' + data[element].address + ')" style="border: none"><i class="icon-pencil7"></i></button>\n' +
-            '<button class="btn-group list-icons-item text-danger-600" data-toggle="tooltip" title="Xóa" onclick="delete_user(' + data[element].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
+            '<button class="btn-group list-icons-item text-primary-600 bg-white" data-toggle="tooltip" title="Sửa" onclick="edit_user(\'' + data[element].id + '\',\'' + data[element].username + '\',\'' + data[element].password + '\',\'' + data[element].name + '\',\'' + data[element].role + '\',\'' + data[element].email + '\',\'' + data[element].phoneNumber + '\',\'' + data[element].address + '\')" style="border: none"><i class="icon-pencil7"></i></button>\n' +
+            '<button class="btn-group list-icons-item text-danger-600 bg-white" data-toggle="tooltip" title="Xóa" onclick="delete_user(' + data[element].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
             '</div></td>'
     }
     tr_event_table = tr_event_table + '</table></td></tr>';

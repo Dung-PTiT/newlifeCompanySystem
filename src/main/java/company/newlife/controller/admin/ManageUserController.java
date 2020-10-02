@@ -83,7 +83,7 @@ public class ManageUserController {
         String roleUser = userDetails.getAuthorities().toString();
         if (roleUser.contains("ROLE_ADMIN")) {
             userService.deleteUser(Integer.parseInt(userID));
-            return new ResponseEntity<>("Xóa người dùng thành công", HttpStatus.OK);
+            return new ResponseEntity<>("Xóa tài khoản thành công", HttpStatus.OK);
         } else if (roleUser.contains("ROLE_USER")) {
             return new ResponseEntity<>("Không có quyền tạo", HttpStatus.INTERNAL_SERVER_ERROR);
         }

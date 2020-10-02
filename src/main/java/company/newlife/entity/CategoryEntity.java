@@ -14,15 +14,15 @@ public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "code", nullable = false, unique = true, length = 64)
+    @Column(name = "code", nullable = false, unique = true, length = 128)
     private String code;
 
     @Column(name = "name", nullable = false, length = 128)
     private String name;
 
-    @Column(name = "description", length = 65536)
-    private String description;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "categoryEntity")
+    private Set<PostEntity> posts;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "category")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "categoryEntity")
     private Set<TagEntity> tags;
 }

@@ -314,7 +314,6 @@ var App = function () {
 
         // Initialize
         $('[data-popup="tooltip"]').tooltip();
-
         // Demo tooltips, remove in production
         var demoTooltipSelector = '[data-popup="tooltip-demo"]';
         if($(demoTooltipSelector).is(':visible')) {

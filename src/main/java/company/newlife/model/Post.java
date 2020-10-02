@@ -5,8 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-import java.util.Set;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -14,17 +13,12 @@ import java.util.Set;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Post {
     private Integer id;
-    private String code;
     private String title;
-    private String description;
     private String content;
     private Boolean active;
-    private Boolean commentBlocked;
     private String createdDate;
     private String lastModifiedDate;
-//    private String authorCode;
-//    private String authorName;
-    private Set<Tag> tags;
-    private List<Comment> comments;
-    private Set<Category> categories;
+    private User user;
+    private Category category;
+    private String imagePostUrl;
 }

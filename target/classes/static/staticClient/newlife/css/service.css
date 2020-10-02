@@ -77,6 +77,23 @@
     margin: 7px 2.875em;
 }
 
+.card-fade-in-scroll {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 0.8s;
+    margin-top: 3em;
+}
+
+.card-fade-in-scroll.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.div-key-feature{
+    padding-left: 12.875em;
+    padding-right: 12.875em;
+    color: #7B7B7B
+}
 
 @media only screen and (max-width: 767px) {
     .banner-title-1 {
@@ -87,8 +104,33 @@
         font-size: 21px !important;
     }
 
+    .menu-content{
+        padding-left: 5em;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .banner-title-1 {
+        font-size: 18px !important;
+    }
+
+    .banner-title-2 {
+        font-size: 18px !important;
+    }
+
     .menu-content li {
-        margin: 7px 2em;
+        margin: 7px 1em;
+    }
+
+    .div-key-feature {
+        padding-left: 5.875em;
+        padding-right: 5.875em;
+        color: #7B7B7B;
+    }
+
+    #keyBenefit{
+        text-align: center;
     }
 }
 
@@ -100,6 +142,16 @@
     .banner-title-2 {
         font-size: 26px !important;
     }
+
+    .div-key-feature {
+        padding-left: 5.875em;
+        padding-right: 5.875em;
+        color: #7B7B7B;
+    }
+
+    .card-fade-in-scroll{
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -110,8 +162,18 @@
     .banner-title-2 {
         font-size: 31px !important;
     }
+
+    .div-key-feature {
+        padding-left: 7.875em;
+        padding-right: 7.875em;
+        color: #7B7B7B
+    }
 }
 
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (min-width: 1200px) and (max-width: 1343px) {
+    .div-key-feature {
+        padding-left: 7.875em;
+        padding-right: 7.875em;
+        color: #7B7B7B
+    }
 }

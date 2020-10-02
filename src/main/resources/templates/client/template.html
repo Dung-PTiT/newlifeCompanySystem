@@ -27,60 +27,56 @@
     <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.tools.min.js}"></script>
     <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.revolution.min.js}"></script>
     <script type="text/javascript" th:src="@{/staticClient/javascript/slider.js}"></script>
-<!--    <link rel="stylesheet" type="text/css"-->
-<!--          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-<!--    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">-->
-<!--    </script>-->
-<!--    <script async defer-->
-<!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">-->
-<!--    </script>-->
+    <!--    <link rel="stylesheet" type="text/css"-->
+    <!--          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <!--    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">-->
+    <!--    </script>-->
+    <!--    <script async defer-->
+    <!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">-->
+    <!--    </script>-->
     <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <link th:href="@{/staticClient/newlife/images/logoNewlife.png}" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" th:href="@{/staticClient/newlife/css/template.css}">
 
     <style>
-        #logoImg {
-            -webkit-animation: spin 2s linear infinite;
-            -moz-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
+        .logoImg {
+            animation: shake 2s linear;
+            animation-iteration-count: infinite;
         }
 
-        @keyframes spin {
-
-            from {
-                transform: rotate(30deg);
+        @keyframes shake {
+            0% {
+                transform: translate(5px,-20px) rotate(0deg);
             }
-            to {
-                transform: rotate(0deg);
+            50% {
+                transform: translate(-5px, -20px) rotate(0deg);
+            }
+            100% {
+                transform: translate(10px, -12px) rotate(0deg);
             }
         }
     </style>
-    <style>
-        .zs-menu {
-            display: none !important;
-        }
-    </style>
-<!--    <script>-->
-<!--        $(document).ready(function () {-->
-<!--            initMap();-->
-<!--        });-->
+    <!--    <script>-->
+    <!--        $(document).ready(function () {-->
+    <!--            initMap();-->
+    <!--        });-->
 
-<!--        function initMap() {-->
-<!--            var map = new google.maps.Map(document.getElementById('add_company_map'), {-->
-<!--                zoom: 17,-->
-<!--                center: {lat: 21.020309, lng: 105.826360},-->
-<!--                disableDefaultUI: true,-->
-<!--                fullscreenControl: true,-->
-<!--                zoomControl: true-->
-<!--            });-->
-<!--            var infowindow = new google.maps.InfoWindow;-->
+    <!--        function initMap() {-->
+    <!--            var map = new google.maps.Map(document.getElementById('add_company_map'), {-->
+    <!--                zoom: 17,-->
+    <!--                center: {lat: 21.020309, lng: 105.826360},-->
+    <!--                disableDefaultUI: true,-->
+    <!--                fullscreenControl: true,-->
+    <!--                zoomControl: true-->
+    <!--            });-->
+    <!--            var infowindow = new google.maps.InfoWindow;-->
 
-<!--            var marker = new google.maps.Marker({-->
-<!--                position: new google.maps.LatLng(21.020309, 105.826360),-->
-<!--                map: map-->
-<!--            });-->
-<!--        }-->
-<!--    </script>-->
+    <!--            var marker = new google.maps.Marker({-->
+    <!--                position: new google.maps.LatLng(21.020309, 105.826360),-->
+    <!--                map: map-->
+    <!--            });-->
+    <!--        }-->
+    <!--    </script>-->
 </head>
 <body class="header_sticky" style="margin-top: -25px">
 <div class="boxed">
@@ -90,8 +86,7 @@
                 <div class="col-3 col-sm-3 col-md-1 menu-main row">
                     <div id="logo" class="logo">
                         <a th:href="@{/dashboard}" rel="home">
-                            <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" class="menu-logo"
-                                 id="logoImg">
+                            <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" class="menu-logo logoImg">
                             <span class="header-text menu-company">NEWLIFE</span>
                         </a>
                     </div>
@@ -148,7 +143,8 @@
                     <div class="col-xs-12 col-sm-4 footer-contact-info">
                         <div class="logo logo-footer">
                             <a th:href="@{/dashboard}" rel="home">
-                                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="image">
+                                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="image"
+                                     class="logoImg">
                                 <span class="header-text">NEWLIFE</span>
                             </a>
                         </div>
@@ -267,7 +263,7 @@
         </div>
     </div>
     <div class="zalo-chat-widget" data-oaid="1259398921512045854"
-         data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0"
+         data-welcome-message="NEWLIFE rất vui khi được hỗ trợ bạn" data-autopopup="0"
          data-width="300" data-height="370">
     </div>
 </div>

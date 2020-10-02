@@ -24,8 +24,7 @@ import org.springframework.web.servlet.resource.VersionResourceResolver;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
-@EnableConfigurationProperties
-@EntityScan(basePackages = {"company.newlife.entity"})
+
 public class NewlifeApplication extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
     @Autowired
@@ -71,7 +70,7 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
         http.csrf().disable();
         //request hop le
         http.authorizeRequests()
-                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**").permitAll()
+                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**","/api/admin/**","/v2/**","/swagger-ui.html").permitAll()
                 .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .and().exceptionHandling().accessDeniedPage("/access-denied-role");
         http.authorizeRequests().and()

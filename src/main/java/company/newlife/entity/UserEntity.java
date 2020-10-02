@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -46,6 +47,6 @@ public class UserEntity {
     }
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "userEntity")
-    private List<PostEntity> postEntityList;
+    private Set<PostEntity> postEntityList;
 
 }

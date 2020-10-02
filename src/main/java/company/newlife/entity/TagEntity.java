@@ -3,7 +3,6 @@ package company.newlife.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Data
 @Entity
@@ -22,9 +21,6 @@ public class TagEntity {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", nullable = false, referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_category_category_tag"))
-    private CategoryEntity category;
-
-    @ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY)
-    private Set<PostEntity> posts;
+    @JoinColumn(name = "category_id", nullable = false)
+    private CategoryEntity categoryEntity;
 }

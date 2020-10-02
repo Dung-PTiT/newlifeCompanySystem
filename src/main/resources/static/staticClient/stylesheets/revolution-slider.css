@@ -1129,7 +1129,6 @@ img.tp-slider-alternative-image {
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) !important;
     font-size: 15px;
     line-height: 45px !important;
-    background: url(/../img/revolution-slider/gradient/g30.html) repeat-x top;
     font-family: arial, sans-serif;
     font-weight: bold;
     letter-spacing: -1px;
@@ -1142,7 +1141,6 @@ img.tp-slider-alternative-image {
     padding: 9px 20px;
     font-size: 19px;
     line-height: 57px !important;
-    background: url(/../img/revolution-slider/gradient/g40.html) repeat-x top
 }
 
 
@@ -1325,7 +1323,6 @@ img.tp-slider-alternative-image {
 }
 
 .tp-bannershadow.tp-shadow1 {
-    background: url(/../assets/revolution-slider/shadow1.html) no-repeat;
     background-size: 100% 100%;
     width: 890px;
     height: 60px;
@@ -1333,7 +1330,6 @@ img.tp-slider-alternative-image {
 }
 
 .tp-bannershadow.tp-shadow2 {
-    background: url(/../assets/revolution-slider/shadow2.html) no-repeat;
     background-size: 100% 100%;
     width: 890px;
     height: 60px;
@@ -1341,7 +1337,6 @@ img.tp-slider-alternative-image {
 }
 
 .tp-bannershadow.tp-shadow3 {
-    background: url(/../assets/revolution-slider/shadow3.html) no-repeat;
     background-size: 100% 100%;
     width: 890px;
     height: 60px;
@@ -1562,19 +1557,15 @@ img.tp-slider-alternative-image {
 }
 
 .tp-dottedoverlay.twoxtwo {
-    background: url(/../assets/revolution-slider/gridtile.html)
 }
 
 .tp-dottedoverlay.twoxtwowhite {
-    background: url(/../assets/revolution-slider/gridtile_white.html)
 }
 
 .tp-dottedoverlay.threexthree {
-    background: url(/../assets/revolution-slider/gridtile_3x3.html)
 }
 
 .tp-dottedoverlay.threexthreewhite {
-    background: url(/../assets/revolution-slider/gridtile_3x3_white.html)
 }
 
 /********************************
@@ -1618,7 +1609,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.navbar {
     border: 1px solid #666;
     border-bottom: 1px solid #444;
-    background: url(/../assets/revolution-slider/boxed_bgtile.html);
     height: 40px;
     padding: 0px 10px;
     -webkit-border-radius: 5px;
@@ -1627,7 +1617,6 @@ img.tp-slider-alternative-image {
 }
 
 .tp-bullets.simplebullets.navbar-old {
-    background: url(/../assets/revolution-slider/navigdots_bgtile.html);
     height: 35px;
     padding: 0px 10px;
     -webkit-border-radius: 5px;
@@ -1639,7 +1628,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.round .bullet {
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/bullet.html) no-Repeat top left;
     width: 20px;
     height: 20px;
     margin-right: 0px;
@@ -1655,7 +1643,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.round-old .bullet {
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/bullets.html) no-Repeat bottom left;
     width: 23px;
     height: 23px;
     margin-right: 0px;
@@ -1672,7 +1659,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.square .bullet {
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/bullets2.html) no-Repeat bottom left;
     width: 19px;
     height: 19px;
     margin-right: 0px;
@@ -1689,7 +1675,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.square-old .bullet {
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/bullets2.html) no-Repeat bottom left;
     width: 19px;
     height: 19px;
     margin-right: 0px;
@@ -1706,7 +1691,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.navbar .bullet {
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/bullet_boxed.html) no-Repeat top left;
     width: 18px;
     height: 19px;
     margin-right: 5px;
@@ -1727,7 +1711,6 @@ img.tp-slider-alternative-image {
 .tp-bullets.simplebullets.navbar-old .bullet {
     cursor: pointer;
     position: relative;
-    background: url(/../assets/revolution-slider/navigdots.html) no-Repeat bottom left;
     width: 15px;
     height: 15px;
     margin-left: 5px !important;
@@ -2059,7 +2042,6 @@ img.tp-slider-alternative-image {
 .tp-bannertimer {
     width: 100%;
     height: 10px;
-    background: url(../images/slides/slides/timer.png);
     position: absolute;
     z-index: 200;
     top: 0px;
@@ -2131,11 +2113,9 @@ img.tp-slider-alternative-image {
 .tp-caption.slidelink a div {
     width: 3000px;
     height: 1500px;
-    background: url(/../assets/revolution-slider/coloredbg.html) repeat
 }
 
 .tp-caption.slidelink a span {
-    background: url(/../assets/revolution-slider/coloredbg.html) repeat
 }
 
 
@@ -3094,7 +3074,6 @@ img.tp-slider-alternative-image {
 .tp-loader.spinner0 {
     width: 40px;
     height: 40px;
-    background: url(/../assets/revolution-slider/loader.html) no-repeat center center;
     background-color: #fff;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -3125,7 +3104,6 @@ img.tp-slider-alternative-image {
 
 
 .tp-loader.spinner5 {
-    background: url(/../assets/revolution-slider/loader.html) no-repeat 10px 10px;
     background-color: #fff;
     margin: -22px -22px;
     width: 44px;
