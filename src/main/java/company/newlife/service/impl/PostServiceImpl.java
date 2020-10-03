@@ -3,9 +3,11 @@ package company.newlife.service.impl;
 import company.newlife.dao.PostDAO;
 import company.newlife.entity.CategoryEntity;
 import company.newlife.entity.PostEntity;
+import company.newlife.entity.TagEntity;
 import company.newlife.entity.UserEntity;
 import company.newlife.model.Category;
 import company.newlife.model.Post;
+import company.newlife.model.Tag;
 import company.newlife.model.User;
 import company.newlife.service.PostService;
 import company.newlife.util.paging.PagingRequest;
@@ -43,6 +45,11 @@ public class PostServiceImpl implements PostService {
             userEntity.setId(post.getUser().getId());
             postEntity.setUserEntity(userEntity);
         }
+        if (post.getTag() != null) {
+            TagEntity tagEntity = new TagEntity();
+            tagEntity.setId(post.getTag().getId());
+            postEntity.setTagEntity(tagEntity);
+        }
         postDAO.create(postEntity);
     }
 
@@ -60,7 +67,6 @@ public class PostServiceImpl implements PostService {
         if (postEntity.getCategoryEntity() != null) {
             Category category = new Category();
             category.setId(postEntity.getCategoryEntity().getId());
-            category.setCode(postEntity.getCategoryEntity().getCode());
             category.setName(postEntity.getCategoryEntity().getName());
             post.setCategory(category);
         }
@@ -70,6 +76,12 @@ public class PostServiceImpl implements PostService {
             user.setName(postEntity.getUserEntity().getName());
             user.setRole(postEntity.getUserEntity().getRole());
             post.setUser(user);
+        }
+        if (postEntity.getTagEntity() != null) {
+            Tag tag = new Tag();
+            tag.setId(postEntity.getTagEntity().getId());
+            tag.setName((postEntity.getTagEntity().getName()));
+            post.setTag(tag);
         }
         return post;
     }
@@ -103,6 +115,12 @@ public class PostServiceImpl implements PostService {
                 user.setRole(element.getUserEntity().getRole());
                 post.setUser(user);
             }
+            if (element.getTagEntity() != null) {
+                Tag tag = new Tag();
+                tag.setId(element.getTagEntity().getId());
+                tag.setName((element.getTagEntity().getName()));
+                post.setTag(tag);
+            }
             return post;
         }).collect(Collectors.toList());
     }
@@ -127,11 +145,6 @@ public class PostServiceImpl implements PostService {
         }
         if (!postEntity.getImagePostUrl().equals(post.getImagePostUrl()) && post.getImagePostUrl() != null) {
             postEntity.setImagePostUrl(post.getImagePostUrl());
-        }
-        if (!postEntity.getCategoryEntity().getId().equals(post.getCategory().getId())) {
-            CategoryEntity categoryEntity = new CategoryEntity();
-            categoryEntity.setId(post.getCategory().getId());
-            postEntity.setCategoryEntity(categoryEntity);
         }
         postDAO.update(postEntity);
     }
@@ -158,6 +171,26 @@ public class PostServiceImpl implements PostService {
             post.setCreatedDate(element.getCreatedDate());
             post.setLastModifiedDate(element.getLastModifiedDate());
             post.setImagePostUrl(element.getImagePostUrl());
+            if (element.getCategoryEntity() != null) {
+                Category category = new Category();
+                category.setId(element.getCategoryEntity().getId());
+                category.setCode(element.getCategoryEntity().getCode());
+                category.setName(element.getCategoryEntity().getName());
+                post.setCategory(category);
+            }
+            if (element.getUserEntity() != null) {
+                User user = new User();
+                user.setId(element.getUserEntity().getId());
+                user.setName(element.getUserEntity().getName());
+                user.setRole(element.getUserEntity().getRole());
+                post.setUser(user);
+            }
+            if (element.getTagEntity() != null) {
+                Tag tag = new Tag();
+                tag.setId(element.getTagEntity().getId());
+                tag.setName((element.getTagEntity().getName()));
+                post.setTag(tag);
+            }
             return post;
         }).collect(Collectors.toList()));
         response.setDraw(request.getDraw());

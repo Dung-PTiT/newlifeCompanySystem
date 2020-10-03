@@ -13,41 +13,40 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin/category")
-@Api(tags = "Users Rest Controller")
+@RequestMapping("/api")
 public class CategoryRestController {
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping("/getAll")
+    @GetMapping("/public/category/getAll")
     public ApiResponse<List<Category>> getAll() {
         return new ApiResponse<>(true, categoryService.getAll());
     }
 
-    @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/admin/category/create", produces = MediaType.APPLICATION_JSON_VALUE)
     public ApiResponse<String> create(@RequestBody Category category) {
         categoryService.create(category);
         return new ApiResponse<>(true, "");
     }
 
-    @PutMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/admin/category/update", produces = MediaType.APPLICATION_JSON_VALUE)
     public ApiResponse<String> update(@RequestBody Category category) {
         categoryService.update(category);
         return new ApiResponse<>(true, "");
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/admin/category/delete/{id}")
     public ApiResponse<String> delete(@PathVariable("id") Integer id) {
         categoryService.delete(id);
         return new ApiResponse<>(true, "");
     }
 
-    @PostMapping("/fetch")
+    @PostMapping("/public/category/fetch")
     public ApiResponse<PagingResponse<Category>> fetch(@RequestBody PagingRequest request) {
         return new ApiResponse<>(true, categoryService.fetch(request));
     }
 
-    @GetMapping("/getById/{id}")
+    @GetMapping("/public/category/getById/{id}")
     public ApiResponse<Category> getById(@PathVariable("id") Integer id) {
         return new ApiResponse<>(true, categoryService.get(id));
     }

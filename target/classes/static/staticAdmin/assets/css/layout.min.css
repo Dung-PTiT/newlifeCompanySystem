@@ -128,7 +128,7 @@ body {
 .sidebar {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 12.875rem
+    width: 11.875rem
 }
 
 .sidebar:not(.sidebar-component) {

@@ -18,7 +18,8 @@ public class Post {
     private Boolean active;
     private String createdDate;
     private String lastModifiedDate;
+    private String imagePostUrl;
     private User user;
     private Category category;
-    private String imagePostUrl;
+    private Tag tag;
 }

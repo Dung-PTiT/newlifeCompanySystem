@@ -2,6 +2,7 @@ package company.newlife.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -26,14 +27,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo getApiInfo() {
-        Contact contact = new Contact("stackjava.com", "https://stackjava.com", "cuong.9312@gmail.com");
         return new ApiInfoBuilder()
-                .title("Spring Boot Swagger")
-                .description("Demo Spring Boot Swagger")
-                .version("1.0.0")
-                .license("Apache 2.0")
-                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
-                .contact(contact)
                 .build();
     }
 }

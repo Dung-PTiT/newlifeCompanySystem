@@ -2162,7 +2162,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) + .form-con
 
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-brand {
-        min-width: 11.625rem
+        min-width: 10.625rem;
     }
 
     .navbar-expand-md .navbar-nav-link:before {
@@ -2763,7 +2763,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) + .form-con
 
 .navbar-header {
     margin-left: -1.25rem;
-    margin-right: 1.25rem
+    margin-right: 0;
 }
 
 .navbar-header .navbar-brand {

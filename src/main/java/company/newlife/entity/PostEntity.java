@@ -42,12 +42,16 @@ public class PostEntity {
     private String lastModifiedDate;
 
     @ManyToOne
-    @JoinColumn(name="category_id")
+    @JoinColumn(name = "category_id")
     private CategoryEntity categoryEntity;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity userEntity;
+
+    @ManyToOne
+    @JoinColumn(name = "tag_id")
+    private TagEntity tagEntity;
 
     public PostEntity() {
         this.isActive = false;

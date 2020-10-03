@@ -53,6 +53,10 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
                 .resourceChain(false)
                 .addResolver(new VersionResourceResolver().addContentVersionStrategy("/**"))
                 .addTransformer(new CssLinkResourceTransformer());
+        registry.addResourceHandler("swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/swagger-ui.html");
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
     @Bean
@@ -70,8 +74,8 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
         http.csrf().disable();
         //request hop le
         http.authorizeRequests()
-                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**","/api/admin/**","/v2/**","/swagger-ui.html").permitAll()
-                .antMatchers("/admin/**").hasAnyRole("ADMIN")
+                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**","/api/public/**", "/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/v2/api-docs/**").permitAll()
+                .antMatchers("/admin/**", "/api/admin/**").hasAnyRole("ADMIN")
                 .and().exceptionHandling().accessDeniedPage("/access-denied-role");
         http.authorizeRequests().and()
                 .formLogin()

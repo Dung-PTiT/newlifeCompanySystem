@@ -3,6 +3,7 @@ package company.newlife.service.impl;
 import company.newlife.dao.TagDAO;
 import company.newlife.entity.CategoryEntity;
 import company.newlife.entity.TagEntity;
+import company.newlife.model.Category;
 import company.newlife.model.Tag;
 import company.newlife.service.TagService;
 import company.newlife.util.paging.PagingRequest;
@@ -43,6 +44,13 @@ public class TagServiceImpl implements TagService {
                 tag.setId(t.getId());
                 tag.setCode(t.getCode());
                 tag.setName(t.getName());
+                if(t.getCategoryEntity()!=null){
+                    Category category = new Category();
+                    category.setId(t.getCategoryEntity().getId());
+                    category.setCode(t.getCategoryEntity().getCode());
+                    category.setName(t.getCategoryEntity().getName());
+                    tag.setCategory(category);
+                }
                 return tag;
             }).collect(Collectors.toList());
         }
@@ -71,6 +79,13 @@ public class TagServiceImpl implements TagService {
             tag.setId(element.getId());
             tag.setCode(element.getCode());
             tag.setName(element.getName());
+            if(element.getCategoryEntity()!=null){
+                Category category = new Category();
+                category.setId(element.getCategoryEntity().getId());
+                category.setCode(element.getCategoryEntity().getCode());
+                category.setName(element.getCategoryEntity().getName());
+                tag.setCategory(category);
+            }
             return tag;
         }).collect(Collectors.toList()));
         response.setDraw(request.getDraw());

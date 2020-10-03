@@ -122,32 +122,32 @@ function showUserTable(data) {
         + '<tr class="bg-light" style="text-align: center;">'
         + '<th>STT</th>'
         + '<th>Tên tài khoản</th>'
-        + '<th style="text-align: center;">Tên người dùng</th>'
-        + '<th style="text-align: center;">Quyền</th>'
-        + '<th style="text-align: center;">Email</th>'
-        + '<th style="text-align: center;">Số điện thoại</th>'
-        + '<th style="text-align: center;">Địa chỉ</th>'
-        + '<th style="text-align: center;">Tác vụ</th>'
+        + '<th>Tên người dùng</th>'
+        + '<th>Quyền</th>'
+        + '<th>Email</th>'
+        + '<th>Số điện thoại</th>'
+        + '<th>Địa chỉ</th>'
+        + '<th>Tác vụ</th>'
         + '</tr>';
     var stt = 0;
     for (var element in data) {
         stt++;
         var roleUser = "";
-        if(data[element].role == "ROLE_ADMIN"){
+        if (data[element].role == "ROLE_ADMIN") {
             roleUser = "Admin";
         }
-        if(data[element].role == "ROLE_USER"){
+        if (data[element].role == "ROLE_USER") {
             roleUser = "Tác giả";
         }
         tr_event_table = tr_event_table +
-            '<tr>'
-            + '<td style="text-align: center;">' + stt + '</td>'
-            + '<td style="text-align: center;">' + data[element].username + '</td>'
-            + '<td style="text-align: center;">' + data[element].name + '</td>'
-            + '<td style="text-align: center;">' + roleUser + '</td>'
-            + '<td style="text-align: center;">' + data[element].email + '</td>'
-            + '<td style="text-align: center;">' + data[element].phoneNumber + '</td>'
-            + '<td style="text-align: center;">' + data[element].address + '</td>'
+            '<tr style="text-align: center;">'
+            + '<td>' + stt + '</td>'
+            + '<td>' + data[element].username + '</td>'
+            + '<td>' + data[element].name + '</td>'
+            + '<td>' + roleUser + '</td>'
+            + '<td>' + data[element].email + '</td>'
+            + '<td>' + data[element].phoneNumber + '</td>'
+            + '<td>' + data[element].address + '</td>'
             + '<td><div class="list-icons">' +
             '<button class="btn-group list-icons-item text-primary-600 bg-white" data-toggle="tooltip" title="Sửa" onclick="edit_user(\'' + data[element].id + '\',\'' + data[element].username + '\',\'' + data[element].password + '\',\'' + data[element].name + '\',\'' + data[element].role + '\',\'' + data[element].email + '\',\'' + data[element].phoneNumber + '\',\'' + data[element].address + '\')" style="border: none"><i class="icon-pencil7"></i></button>\n' +
             '<button class="btn-group list-icons-item text-danger-600 bg-white" data-toggle="tooltip" title="Xóa" onclick="delete_user(' + data[element].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
