@@ -74,7 +74,7 @@ public class NewlifeApplication extends WebSecurityConfigurerAdapter implements 
         http.csrf().disable();
         //request hop le
         http.authorizeRequests()
-                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**","/api/public/**", "/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/v2/api-docs/**").permitAll()
+                .antMatchers("/login", "/logout", "/loginError", "/staticAdmin/**", "/staticClient/**","/api/public/**","/api/image/**", "/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/v2/api-docs/**").permitAll()
                 .antMatchers("/admin/**", "/api/admin/**").hasAnyRole("ADMIN")
                 .and().exceptionHandling().accessDeniedPage("/access-denied-role");
         http.authorizeRequests().and()

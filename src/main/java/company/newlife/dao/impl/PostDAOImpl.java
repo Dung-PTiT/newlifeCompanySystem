@@ -71,4 +71,6 @@ public class PostDAOImpl implements PostDAO {
         String hql = "select count(p) from PostEntity p";
         return entityManager.createQuery(hql, Long.class).getSingleResult();
     }
+
+
 }

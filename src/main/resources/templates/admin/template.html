@@ -41,14 +41,17 @@
     <link th:href="@{/staticClient/newlife/images/logoNewlife.png}" rel="shortcut icon">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .logout-link:hover {
             color: #ff0000;
             font-weight: bold;
         }
     </style>
 </head>
-<body class="sidebar-xs" data-gr-c-s-loaded="true">
-<!--<body data-gr-c-s-loaded="true">-->
+<!--<body class="sidebar-xs" data-gr-c-s-loaded="true">-->
+<body data-gr-c-s-loaded="true">
 <!-- Main navbar -->
 <div class="navbar navbar-expand-md navbar-light navbar-static">
     <!-- Header with logos -->
@@ -71,9 +74,9 @@
                 <img th:src="@{/staticClient/newlife/images/logoNewlife.png}">
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
-            <i class="icon-tree5"></i>
-        </button>
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">-->
+<!--            <i class="icon-tree5"></i>-->
+<!--        </button>-->
         <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
             <i class="icon-paragraph-justify3"></i>
         </button>

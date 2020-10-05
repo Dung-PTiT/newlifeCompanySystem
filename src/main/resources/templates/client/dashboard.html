@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" th:href="@{/staticClient/newlife/css/dashboard.css}">
-</head>
+
 <body style="margin-top: 0px!important;">
 <div class="boxed">
     <div layout:fragment="content_body">
@@ -66,29 +66,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-6 div-image-aboutUS">
-                <img th:src="@{/staticClient/newlife/images/image5.png}" alt="content" class="img-holder yy"
-                     style="max-width: 100%;height: auto;">
-            </div>
-            <div class="col-xs-6">
-                <div class="empty-space height30"></div>
-                <div class="flat-accordion style5">
-                    <div class="title-accordion">
-                        <span>About us</span>
-                    </div>
-                    <div class="flat-toggle">
-                        <div class="toggle-content">
-                            <p>Newlife Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem
-                                Ipsum
-                                has been the industry’s standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="row" id="about-us"></div>
         <section class="flat-row no-paddingbottom">
             <div class="header-service">
                 <span>Our Services</span>
@@ -98,123 +76,7 @@
                 </div>
             </div>
             <div class="container" style="width: 67%">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <div class="iconbox images card-service">
-                            <div class="box-header div-image-service">
-                                <img th:src="@{/staticClient/newlife/images/image20.png}" alt="icon">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <a href="#">Service Quality Testing</a>
-                                </div>
-                                <p>Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit
-                                    anim
-                                    id est</p>
-                                <button class="btn btn-group button-service">
-                                    Learn more
-                                    <i class="fa fa-chevron-right icon-service"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4 ">
-                        <div class="iconbox images card-service">
-                            <div class="box-header div-image-service">
-                                <img th:src="@{/staticClient/newlife/images/image22.png}" alt="icon">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <a href="#">Network Quality Testing</a>
-                                </div>
-                                <p>Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit
-                                    anim
-                                    id est</p>
-                                <button class="btn btn-group button-service">
-                                    Learn more
-                                    <i class="fa fa-chevron-right icon-service"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4 ">
-                        <div class="iconbox images card-service">
-                            <div class="box-header div-image-service">
-                                <img th:src="@{/staticClient/newlife/images/image21.png}" alt="icon">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <a href="#">Data Analyzer Solution</a>
-                                </div>
-                                <p>Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit
-                                    anim
-                                    id est</p>
-                                <button class="btn btn-group button-service">
-                                    Learn more
-                                    <i class="fa fa-chevron-right icon-service"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4 ">
-                        <div class="iconbox images card-service">
-                            <div class="box-header div-image-service">
-                                <img th:src="@{/staticClient/newlife/images/image25.png}" alt="icon">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <a href="#">FTTx Testing</a>
-                                </div>
-                                <p>Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit
-                                    anim
-                                    id est</p>
-                                <button class="btn btn-group button-service">
-                                    Learn more
-                                    <i class="fa fa-chevron-right icon-service"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-lg-4 ">
-                        <div class="iconbox images card-service">
-                            <div class="box-header div-image-service">
-                                <img th:src="@{/staticClient/newlife/images/image23.png}" alt="icon">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <a href="#">PSTN Testing</a>
-                                </div>
-                                <p>Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit
-                                    anim
-                                    id est</p>
-                                <button class="btn btn-group button-service">
-                                    Learn more
-                                    <i class="fa fa-chevron-right icon-service"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4 ">
-                        <div class="iconbox images card-service">
-                            <div class="box-header div-image-service">
-                                <img th:src="@{/staticClient/newlife/images/image26.png}" alt="icon">
-                            </div>
-                            <div class="box-content div-content-service">
-                                <div class="box-title div-title-service">
-                                    <a href="#">Roaming Quality Analyzer</a>
-                                </div>
-                                <p>Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit
-                                    anim
-                                    id est</p>
-                                <button class="btn btn-group button-service">
-                                    Learn more
-                                    <i class="fa fa-chevron-right icon-service"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="row" id="our-service"></div>
             </div>
         </section>
         <div class="container div-benefits">
@@ -240,6 +102,7 @@
                 </div>
             </div>
         </div>
+        <script th:src="@{/staticClient/newlife/js/dashboard.js}"></script>
     </div>
 </div>
 </body>

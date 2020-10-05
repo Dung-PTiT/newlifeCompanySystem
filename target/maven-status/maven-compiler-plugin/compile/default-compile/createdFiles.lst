@@ -33,6 +33,7 @@ company\newlife\util\paging\PagingRequest.class
 company\newlife\controller\client\ServiceController.class
 company\newlife\dao\CategoryDAO.class
 company\newlife\controller\admin\ManageUserController.class
+company\newlife\controller\api\ImageController.class
 company\newlife\util\MultipartFileSender$Range.class
 company\newlife\util\paging\PagingResponse.class
 company\newlife\entity\TagEntity.class

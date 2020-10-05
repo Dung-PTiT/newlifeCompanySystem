@@ -118,7 +118,7 @@ function getUserByRole(roleUser) {
 }
 
 function showUserTable(data) {
-    var tr_event_table = '<tr class="row-user-table"><td colspan="3"><table class="table table-bordered">'
+    var tr_user_table = '<tr class="row-user-table"><td colspan="3"><table class="table table-bordered">'
         + '<tr class="bg-light" style="text-align: center;">'
         + '<th>STT</th>'
         + '<th>Tên tài khoản</th>'
@@ -139,7 +139,7 @@ function showUserTable(data) {
         if (data[element].role == "ROLE_USER") {
             roleUser = "Tác giả";
         }
-        tr_event_table = tr_event_table +
+        tr_user_table = tr_user_table +
             '<tr style="text-align: center;">'
             + '<td>' + stt + '</td>'
             + '<td>' + data[element].username + '</td>'
@@ -153,7 +153,7 @@ function showUserTable(data) {
             '<button class="btn-group list-icons-item text-danger-600 bg-white" data-toggle="tooltip" title="Xóa" onclick="delete_user(' + data[element].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
             '</div></td>'
     }
-    tr_event_table = tr_event_table + '</table></td></tr>';
-    $("#usersTable").append(tr_event_table);
+    tr_user_table = tr_user_table + '</table></td></tr>';
+    $("#usersTable").append(tr_user_table);
 
 }
