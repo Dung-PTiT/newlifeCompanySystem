@@ -1,5 +1,7 @@
 package company.newlife.controller.api;
 
+import company.newlife.model.UploadForm;
+import company.newlife.util.FileDir;
 import lombok.Value;
 import org.apache.commons.io.FileUtils;
 import org.apache.tomcat.util.http.fileupload.FileItem;
@@ -7,7 +9,10 @@ import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.RequestContext;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,32 +22,54 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-@Controller
-
+@RestController
 public class ImageController {
+    @Autowired
+    private FileDir fileDir;
 
     @RequestMapping(value = "/api/image/upload/{imageName}")
     @ResponseBody
     public byte[] uploadImage(@PathVariable(value = "imageName") String imageName) throws IOException {
-        File serverFile = new File("C:\\Users\\Dell\\Desktop\\newlifeImage\\" + imageName);
+        File serverFile = new File(fileDir.getFileDir() + imageName);
         return Files.readAllBytes(serverFile.toPath());
     }
 
     @PostMapping("/api/admin/update-image-post")
-    public String download(@RequestParam("fileName") MultipartFile multipartFile) {
-        final String UPLOAD_FOLDER = "C:\\Users\\Dell\\Desktop\\newlifeImageSave\\";
-
-        File file = new File(UPLOAD_FOLDER, Objects.requireNonNull(multipartFile.getOriginalFilename()));
+    public ResponseEntity<?> multiUploadFileModel(@ModelAttribute UploadForm form) {
+        String result = null;
         try {
-            FileUtils.writeByteArrayToFile(file, multipartFile.getBytes());
+            result = this.saveUploadedFiles(form.getFile());
         } catch (IOException e) {
             e.printStackTrace();
+            return new ResponseEntity<>("Lỗi: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return "redirect:/admin/manage/dashboard";
+        if(result == "0"){
+            return new ResponseEntity<>("Chưa chọn file", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<String>(result, HttpStatus.OK);
+    }
+
+    // Save Files
+    private String saveUploadedFiles(MultipartFile file) throws IOException {
+        File uploadDir = new File(fileDir.getFileDirTest());
+        uploadDir.mkdirs();
+
+        if (file.isEmpty()) {
+            return "0";
+        }
+        String uploadFilePath = fileDir.getFileDirTest() + "/" + file.getOriginalFilename();
+
+        byte[] bytes = file.getBytes();
+        Path path = Paths.get(uploadFilePath);
+        Files.write(path, bytes);
+
+        return "Cập nhật ảnh thành công";
     }
 }

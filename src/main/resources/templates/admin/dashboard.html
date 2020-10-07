@@ -43,7 +43,7 @@
         <div class="modal" role="dialog" id="modal-upload-file" aria-label="Insert Image"
              style="display: none;"
              aria-hidden="true">
-            <form th:action="@{/api/admin/update-image-post}" method="POST" enctype="multipart/form-data">
+            <form id="fileUploadForm" method="POST" enctype="multipart/form-data">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header"><h4 class="modal-title">Thêm ảnh</h4>
@@ -52,9 +52,9 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group note-form-group note-group-select-from-files">
+                            <div class="form-group note-form-group">
                                 <input class="note-image-input form-control-file note-form-control note-input"
-                                       type="file" name="fileName" multiple="multiple" onchange="loadFile(event)"
+                                       type="file" name="file" onchange="loadFile(event)"
                                        id="fileName">
                                 <div class="card mt-3">
                                     <div class="card-body">
@@ -66,7 +66,9 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary note-btn note-btn-primary note-image-btn">Cập
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+                            <button type="submit" class="btn btn-primary note-btn note-btn-primary note-image-btn"
+                                    id="submitButton">Cập
                                 nhật
                             </button>
                         </div>

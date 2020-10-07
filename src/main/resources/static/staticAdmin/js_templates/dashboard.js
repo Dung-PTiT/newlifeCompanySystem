@@ -16,6 +16,14 @@ $(document).on("scroll", function () {
 
 $(document).ready(function () {
     getAllPost();
+
+    $("#submitButton").click(function (event) {
+        // Stop default form Submit.
+        event.preventDefault();
+        // Call Ajax Submit.
+        ajaxSubmitForm();
+
+    });
 });
 
 function getAllPost() {
@@ -86,7 +94,32 @@ var loadFile = function (event) {
     reader.onload = function () {
         var output = document.getElementById('img_current_show');
         output.src = reader.result;
-        console.log(reader.result)
     };
     reader.readAsDataURL(event.target.files[0]);
 };
+
+function ajaxSubmitForm() {
+    var form = $('#fileUploadForm')[0];
+    var data = new FormData(form);
+    $.ajax({
+        type: "POST",
+        enctype: 'multipart/form-data',
+        url: "/api/admin/update-image-post",
+        data: data,
+        processData: false,
+        contentType: false,
+        cache: false,
+        timeout: 1000000,
+        success: function (data) {
+            swal("Xong", data, "success");
+            $('#fileUploadForm')[0].reset();
+            $('#modal-upload-file').modal('hide');
+            $('#img_current_show').attr('src', '');
+        },
+        error: function (jqXHR) {
+            swal("Lỗi", jqXHR.responseText, "warning");
+            $('#modal-upload-file').modal('hide');
+        }
+    });
+
+}
