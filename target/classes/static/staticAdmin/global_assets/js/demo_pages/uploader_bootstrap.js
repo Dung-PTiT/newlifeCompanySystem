@@ -238,12 +238,12 @@ var FileUpload = function() {
 
 
         //
-        // AJAX upload
+        // AJAX uploadfile-input-ajax
         //
 
         $('.file-input-ajax').fileinput({
-            browseLabel: 'Browse',
-            uploadUrl: "http://localhost", // server upload action
+            browseLabel: 'Chọn file',
+            uploadUrl: "/api/image/downloadFile/fileName", // server upload action
             uploadAsync: true,
             maxFileCount: 5,
             initialPreview: [],
@@ -257,7 +257,7 @@ var FileUpload = function() {
                 uploadClass: '',
                 zoomIcon: '<i class="icon-zoomin3"></i>',
                 zoomClass: '',
-                indicatorNew: '<i class="icon-file-plus text-success"></i>',
+                // indicatorNew: '<i class="icon-file-plus text-success"></i>',
                 indicatorSuccess: '<i class="icon-checkmark3 file-icon-large text-success"></i>',
                 indicatorError: '<i class="icon-cross2 text-danger"></i>',
                 indicatorLoading: '<i class="icon-spinner2 spinner text-muted"></i>',
@@ -266,7 +266,7 @@ var FileUpload = function() {
                 icon: '<i class="icon-file-check"></i>',
                 modal: modalTemplate
             },
-            initialCaption: 'No file selected',
+            initialCaption: 'Chưa có file được chọn',
             previewZoomButtonClasses: previewZoomButtonClasses,
             previewZoomButtonIcons: previewZoomButtonIcons
         });

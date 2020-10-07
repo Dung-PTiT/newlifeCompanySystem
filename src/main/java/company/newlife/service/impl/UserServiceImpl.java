@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             User user = new User();
             user.setId(userEntity.getId());
             user.setUsername(userEntity.getUsername());
-            user.setPassword(userEntity.getPassword());
+//            user.setPassword(userEntity.getPassword());
             user.setName(userEntity.getName());
             user.setPhoneNumber(userEntity.getPhoneNumber());
             user.setEmail(userEntity.getEmail());
@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             User user = new User();
             user.setId(userEntity.getId());
             user.setUsername(userEntity.getUsername());
-            user.setPassword(userEntity.getPassword());
+//            user.setPassword(userEntity.getPassword());
             user.setName(userEntity.getName());
             user.setRole(userEntity.getRole());
             user.setAddress(userEntity.getAddress());
@@ -119,7 +119,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             User user = new User();
             user.setId(userEntity.getId());
             user.setUsername(userEntity.getUsername());
-            user.setPassword(userEntity.getPassword());
+//            user.setPassword(userEntity.getPassword());
             user.setName(userEntity.getName());
             user.setRole(userEntity.getRole());
             user.setAddress(userEntity.getAddress());

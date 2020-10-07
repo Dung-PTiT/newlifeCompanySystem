@@ -30,7 +30,7 @@
 }
 
 .div-content-service {
-    background-color: #ffffff;
+    background-color: #f3f6f9;
     padding: 30px 30px 19px 19px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .12), 1px 1px 1px rgba(0, 0, 0, .24);
 }
@@ -75,18 +75,6 @@
 
 .menu-content li {
     margin: 7px 2.875em;
-}
-
-.card-fade-in-scroll {
-    opacity: 0;
-    transform: translate(0, 10vh);
-    transition: all 0.8s;
-    margin-top: 3em;
-}
-
-.card-fade-in-scroll.visible {
-    opacity: 1;
-    transform: translate(0, 0);
 }
 
 .div-key-feature {

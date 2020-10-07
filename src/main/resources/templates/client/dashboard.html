@@ -67,12 +67,21 @@
             </div>
         </div>
         <div class="row" id="about-us"></div>
-        <section class="flat-row no-paddingbottom">
-            <div class="header-service">
-                <span>Our Services</span>
-                <div>
-                    <a th:href="@{/service}">All Services <i class="fa fa-chevron-right"
-                                                             style="margin-left: 5px; color:dodgerblue"></i></a>
+        <section class="flat-row no-paddingbottom" style="background-color: #f2f5f8">
+<!--            <div class="header-service">-->
+<!--                <span data-aos="fade-right" style="color: #00aeff">Our Services</span>-->
+<!--                <div data-aos="fade-left">-->
+<!--                    <a th:href="@{/service}">All Services <i class="fa fa-chevron-right"-->
+<!--                                                             style="margin-left: 5px; color:dodgerblue"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section" style="padding-top: 60px">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        <h1 style="font-weight: bold;color: #00aeff">Dịch vụ nổi bật</h1>
+                        <div class="sub-title">Tận tình, sáng tạo, hết mình</div>
+                    </div>
                 </div>
             </div>
             <div class="container" style="width: 67%">
@@ -96,6 +105,30 @@
                         <i class="fa fa-angle-right"></i>Finacials and money back
                     </h6>
                     <h6><i class="fa fa-angle-right"></i>Team creation and supports</h6>
+                    <br>
+                    <div class="flatcounter-wrap clearfix">
+                        <div class="flat-counter color-theme">
+                            <div class="content-counter ">
+                                <div class="numb-count" data-to="900" data-speed="4000" data-waypoint-active="yes">900</div>
+                                <div class="name-count">Happy Clients</div>
+                            </div>
+                        </div><!-- /.flat-counter -->
+
+                        <div class="flat-counter color-theme">
+                            <div class="content-counter ">
+
+                                <div class="numb-count" data-to="1340" data-speed="4000" data-waypoint-active="yes">1340</div>
+                                <div class="name-count">Project Complete</div>
+                            </div>
+                        </div><!-- /.flat-counter -->
+
+                        <div class="flat-counter color-theme">
+                            <div class="content-counter ">
+                                <div class="numb-count" data-to="100" data-speed="4000" data-waypoint-active="yes">100</div>
+                                <div class="name-count">Top Website</div>
+                            </div>
+                        </div><!-- /.flat-counter -->
+                    </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6">
                     <img th:src="@{/staticClient/newlife/images/demo.png}"/>

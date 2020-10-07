@@ -97,6 +97,16 @@ public class ManageUserController {
         return userList;
     }
 
+    @PostMapping("/manage/user/getCurrentUser")
+    public @ResponseBody
+    User getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String username = userDetails.getUsername().trim();
+        User user = userService.getByUsername(username);
+        return user;
+    }
+
     @PostMapping("/manage/user/get-all")
     public @ResponseBody
     List<User> getAll() {

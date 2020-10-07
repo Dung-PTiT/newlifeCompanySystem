@@ -28,7 +28,7 @@ function getAllPost() {
             var postDashboardList = [];
             for (var i = 0; i < data.data.length; i++) {
                 var post = data.data[i];
-                if (post.category.id == 1 && post.active == true) {
+                if (post.category.id == 1) {
                     postDashboardList.push(post);
                 }
             }
@@ -38,22 +38,23 @@ function getAllPost() {
 }
 
 function showPostTable(postList) {
-    var tr_post_table = '<table class="table table-bordered">'
+    var tr_post_table = '<table class="table">'
         + '<tr class="bg-light" style="text-align: center;">'
-        + '<th><h6>Số</h6></th>'
-        + '<th style="display: none">ID</th>'
-        + '<th><h6>Thông tin bài viết</h6></th>'
-        + '<th><h6>Sửa</h6></th>'
+        + '<th class="pb-0"><h6>Số</h6></th>'
+        + '<th class="pb-0" style="display: none">ID</th>'
+        + '<th class="pb-0">Ảnh</th>'
+        + '<th class="pb-0"><h6>Thông tin bài viết</h6></th>'
+        + '<th class="pb-0"><h6>Sửa</h6></th>'
         + '</tr>';
     var stt = 0;
     for (var index in postList) {
         stt++;
         var postStatus = '';
         if (postList[index].active == true) {
-            postStatus = '<span class="badge badge-success">Active</span>';
+            postStatus = '<span class="badge badge-success">Kích hoạt</span>';
         }
         if (postList[index].active == false) {
-            postStatus = '<span class="badge badge-secondary">Inactive</span>';
+            postStatus = '<span class="badge badge-secondary">Chưa kích hoạt</span>';
         }
         var imgName = postList[index].imagePostUrl;
         tr_post_table = tr_post_table +
@@ -62,7 +63,9 @@ function showPostTable(postList) {
             + '<td style="display: none">' + postList[index].id + '</td>'
             + '<td style="text-align: center"><h6><span class="text-primary mr-2">Tên ảnh:</span>' + postList[index].imagePostUrl + '</h6>' +
             '<img class="mb-2" src="/api/image/upload/' + imgName + '" width="200" height="200"/>' +
-            '<h6><span class="text-primary mr-2">Tiêu đề:</span>' + postList[index].title + '</h6>' +
+            '<button type="button" class="btn btn-info legitRipple mt-2" data-toggle="modal" data-target="#modal-upload-file" style="padding: 1px 5px 0px 5px;">\n' +
+            '<i class="icon-file-upload2" data-toggle="tooltip" title="Thay ảnh"></i></button></td>' +
+            '<td><h6><span class="text-primary mr-2">Tiêu đề:</span>' + postList[index].title + '</h6>' +
             '<h6><span class="text-primary mr-2">Nội dung:</span>' + postList[index].content + '</h6>' +
             '<h6><span class="text-primary mr-2">Ngày tạo:</span>' + postList[index].createdDate + ' ---- <span class="text-primary mr-2" >Người tạo:</span>' + postList[index].user.name + '</h6>' +
             '<h6><span class="text-primary mr-2">Ngày sửa gần nhất:</span>' + postList[index].lastModifiedDate + '</h6>' +
@@ -77,3 +80,13 @@ function showPostTable(postList) {
     $("#postTable").append(tr_post_table);
 
 }
+
+var loadFile = function (event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+        var output = document.getElementById('img_current_show');
+        output.src = reader.result;
+        console.log(reader.result)
+    };
+    reader.readAsDataURL(event.target.files[0]);
+};

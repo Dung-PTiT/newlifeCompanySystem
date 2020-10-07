@@ -4,13 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-    <title>Admin Manage User</title>
+    <title>Quản lý tài khoản</title>
+
+    <!--    <script>-->
+    <!--        var loadFile = function (event) {-->
+    <!--            var reader = new FileReader();-->
+    <!--            reader.onload = function () {-->
+    <!--                var output = document.getElementById('output');-->
+    <!--                output.src = reader.result;-->
+    <!--            };-->
+    <!--            reader.readAsDataURL(event.target.files[0]);-->
+    <!--        };-->
+    <!--    </script>-->
 </head>
 <body>
 <div class="content">
     <section class="container-fluid bg-light h-100" layout:fragment="content_body">
-        <div class="card mt-2">
-            <div class=" border-bottom border">
+        <div class="card mt-4 ml-2 mr-2">
+            <div style="margin: auto;">
                 <h5 class="card-title ml-2 mt-2 mb-1">Bảng thông tin tài khoản</h5>
             </div>
             <div>
@@ -32,8 +43,8 @@
                         <option selected value="USER">Tác giả</option>
                     </select>
                 </div>
-                <div class="row">
-                    <table class="table mr-2 mt-1" id="usersTable">
+                <div class="row" style="margin-right: 0; margin-left: 0;">
+                    <table class="table table-responsive" id="usersTable">
                     </table>
                 </div>
             </div>

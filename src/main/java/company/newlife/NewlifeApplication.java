@@ -4,8 +4,6 @@ import company.newlife.security.UrlAuthenSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.CacheControl;
@@ -24,7 +22,6 @@ import org.springframework.web.servlet.resource.VersionResourceResolver;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
-
 public class NewlifeApplication extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
     @Autowired
