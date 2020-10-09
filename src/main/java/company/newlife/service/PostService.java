@@ -18,4 +18,8 @@ public interface PostService {
     void delete(Integer id);
 
     PagingResponse<Post> fetch(PagingRequest request);
+
+    void updateImage(Post post);
+
+    void updateText(Post post);
 }

@@ -5,12 +5,14 @@ import company.newlife.entity.PostEntity;
 import company.newlife.entity.TagEntity;
 import company.newlife.model.Post;
 import company.newlife.util.paging.PagingRequest;
+import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Repository
@@ -73,4 +75,25 @@ public class PostDAOImpl implements PostDAO {
     }
 
 
+    @Override
+    public void updateImage(PostEntity postEntity) {
+        String hql = "update PostEntity set last_modified_date = :lmd, image_post_url = :ipu where id = :id";
+        Query query = entityManager.createQuery(hql);
+        query.setParameter("lmd", postEntity.getLastModifiedDate());
+        query.setParameter("ipu", postEntity.getImagePostUrl());
+        query.setParameter("id", postEntity.getId());
+        query.executeUpdate();
+    }
+
+    @Override
+    public void updateText(PostEntity postEntity) {
+        String hql = "update PostEntity set last_modified_date = :lmd, title = :t, content = :c, isActive = :ia where id = :id";
+        Query query = entityManager.createQuery(hql);
+        query.setParameter("lmd", postEntity.getLastModifiedDate());
+        query.setParameter("t", postEntity.getTitle());
+        query.setParameter("c", postEntity.getContent());
+        query.setParameter("ia", postEntity.getIsActive());
+        query.setParameter("id", postEntity.getId());
+        query.executeUpdate();
+    }
 }

@@ -1,28 +1,10 @@
-$(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop();
-    var pageBottom = pageTop + $(window).height();
-    var tags = $(".card-fade-in-scroll");
-
-    for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i];
-
-        if ($(tag).position().top < pageBottom) {
-            $(tag).addClass("visible");
-        } else {
-            $(tag).removeClass("visible");
-        }
-    }
-});
-
 $(document).ready(function () {
     getAllPost();
-
     $("#submitButton").click(function (event) {
         // Stop default form Submit.
         event.preventDefault();
         // Call Ajax Submit.
         ajaxSubmitForm();
-
     });
 });
 
@@ -33,14 +15,14 @@ function getAllPost() {
         url: "/api/public/post/getAll",
         dataType: "json",
         success: function (data) {
-            var postDashboardList = [];
+            var postServiceList = [];
             for (var i = 0; i < data.data.length; i++) {
                 var post = data.data[i];
-                if (post.category.id == 1) {
-                    postDashboardList.push(post);
+                if (post.category.id == 2) {
+                    postServiceList.push(post);
                 }
             }
-            showPostTable(postDashboardList);
+            showPostTable(postServiceList);
         }
     });
 }

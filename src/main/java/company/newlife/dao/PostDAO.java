@@ -19,4 +19,8 @@ public interface PostDAO {
     void delete(PostEntity postEntity);
 
     long count();
+
+    void updateImage(PostEntity postEntity);
+
+    void updateText(PostEntity postEntity);
 }

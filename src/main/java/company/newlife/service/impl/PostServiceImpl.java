@@ -198,4 +198,34 @@ public class PostServiceImpl implements PostService {
         response.setTotalDraw(response.getRecordsFiltered() / request.getLength());
         return response;
     }
+
+    @Override
+    public void updateImage(Post post) {
+        PostEntity postEntity = postDAO.get(post.getId());
+        if (!postEntity.getLastModifiedDate().equals(post.getLastModifiedDate()) && post.getLastModifiedDate() != null) {
+            postEntity.setLastModifiedDate(post.getLastModifiedDate());
+        }
+        if (!postEntity.getImagePostUrl().equals(post.getImagePostUrl()) && post.getImagePostUrl() != null) {
+            postEntity.setImagePostUrl(post.getImagePostUrl());
+        }
+        postDAO.updateImage(postEntity);
+    }
+
+    @Override
+    public void updateText(Post post) {
+        PostEntity postEntity = postDAO.get(post.getId());
+        if (!postEntity.getLastModifiedDate().equals(post.getLastModifiedDate()) && post.getLastModifiedDate() != null) {
+            postEntity.setLastModifiedDate(post.getLastModifiedDate());
+        }
+        if (!postEntity.getTitle().equals(post.getTitle()) && post.getTitle() != null) {
+            postEntity.setTitle(post.getTitle());
+        }
+        if (!postEntity.getContent().equals(post.getContent()) && post.getContent() != null) {
+            postEntity.setContent(post.getContent());
+        }
+        if (!postEntity.getIsActive().equals(post.getActive()) && post.getActive() != null) {
+            postEntity.setIsActive(post.getActive());
+        }
+        postDAO.updateText(postEntity);
+    }
 }

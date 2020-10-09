@@ -1,6 +1,8 @@
 package company.newlife.controller.api;
 
+import company.newlife.model.Post;
 import company.newlife.model.UploadForm;
+import company.newlife.service.PostService;
 import company.newlife.util.FileDir;
 import lombok.Value;
 import org.apache.commons.io.FileUtils;
@@ -24,15 +26,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 public class ImageController {
     @Autowired
     private FileDir fileDir;
+
+    @Autowired
+    private PostService postService;
 
     @RequestMapping(value = "/api/image/upload/{imageName}")
     @ResponseBody
@@ -45,31 +48,39 @@ public class ImageController {
     public ResponseEntity<?> multiUploadFileModel(@ModelAttribute UploadForm form) {
         String result = null;
         try {
-            result = this.saveUploadedFiles(form.getFile());
+            result = this.saveUploadedFiles(form.getFile(), form.getPostId());
         } catch (IOException e) {
             e.printStackTrace();
             return new ResponseEntity<>("Lỗi: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        if(result == "0"){
+        if (result == "0") {
             return new ResponseEntity<>("Chưa chọn file", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<String>(result, HttpStatus.OK);
     }
 
     // Save Files
-    private String saveUploadedFiles(MultipartFile file) throws IOException {
-        File uploadDir = new File(fileDir.getFileDirTest());
+    private String saveUploadedFiles(MultipartFile file, Integer postId) throws IOException {
+        File uploadDir = new File(fileDir.getFileDir());
         uploadDir.mkdirs();
 
         if (file.isEmpty()) {
             return "0";
         }
-        String uploadFilePath = fileDir.getFileDirTest() + "/" + file.getOriginalFilename();
+        String uploadFilePath = fileDir.getFileDir() + "/" + file.getOriginalFilename();
 
         byte[] bytes = file.getBytes();
         Path path = Paths.get(uploadFilePath);
         Files.write(path, bytes);
 
+        //update image for post
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
+        String formattedDate = dateFormat.format(new Date()).toString();
+        Post post = new Post();
+        post.setId(postId);
+        post.setImagePostUrl(file.getOriginalFilename());
+        post.setLastModifiedDate(formattedDate);
+        postService.updateImage(post);
         return "Cập nhật ảnh thành công";
     }
 }
