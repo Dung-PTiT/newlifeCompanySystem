@@ -15,34 +15,36 @@ function getAllUsers() {
 }
 
 function add_user() {
-    $('#exampleModalLabel').html("Thêm tài khoản");
-    $('#username').val("");
-    $("#password").val("");
-    $('#name').val("");
+    $('#modal_add_edit_title').text('Thêm tài khoản');
+    $('#username').val('');
+    $('#div_password').show();
+    $('#password').val('');
+    $('#name').val('');
     $('#role').selectpicker('deselectAll');
     $('#role').selectpicker('render');
-    $('#address').val("");
-    $('#email').val("");
-    $('#phoneNumber').val("");
+    $('#address').val('');
+    $('#email').val('');
+    $('#phoneNumber').val('');
     $('#add_edit_popup').modal('show');
     $('#form_add_edit_user').attr('action', '/admin/manage/user/add-edit');
     $('#form_add_edit_user').attr('method', 'post');
 }
 
-function edit_user(userID, username, password, name, role, email, phoneNumber, address) {
-    $('#exampleModalLabel').html("Cập nhật thông tin tài khoản");
+function edit_user(userID, username, name, role, email, phoneNumber, address) {
+    $('#modal_add_edit_title').text('Cập nhật thông tin tài khoản');
     $('#id').attr("readonly", true);
-    $("#id").val(userID);
-    $("#username").val(username);
-    $("#name").val(name);
-    $("#password").val(password);
+    $('#id').val(userID);
+    $('#username').val(username);
+    $('#div_password').hide();
+    $('#password').val('');
+    $('#name').val(name);
     $('#email').val(email);
     $('#phoneNumber').val(phoneNumber);
     $('#address').val(address);
-    $('#role').selectpicker('render');
+    $('#role').val(role).change();
     $('#add_edit_popup').modal('show');
-    $('#form_add_edit_event').attr('action', '/admin/manage/user/add-edit');
-    $('#form_add_edit_event').attr('method', 'put');
+    $('#form_add_edit_user').attr('action', '/admin/manage/user/add-edit');
+    $('#form_add_edit_user').attr('method', 'put');
 }
 
 function submitForm(form) {
@@ -55,11 +57,11 @@ function submitForm(form) {
         data: formData,
         success: function (data) {
             $('#add_edit_popup').modal('hide');
-            swal("Done", data, "success");
+            swal("OK", data, "success");
             getAllUsers();
         },
         error: function (data) {
-            swal("Fail", data.responseText, "warning");
+            swal("Lỗi", data.responseText, "warning");
         }
     });
 }
@@ -84,11 +86,11 @@ function delete_user(userID) {
                         "userID": userID
                     },
                     success: function (data) {
-                        swal("Done", data, "success");
+                        swal("OK", data, "success");
                         getAllUsers();
                     },
                     error: function (data) {
-                        swal("Fail", data.responseText, "warning");
+                        swal("Lỗi", data.responseText, "warning");
                     }
                 });
             }
@@ -149,8 +151,8 @@ function showUserTable(data) {
             + '<td>' + data[element].phoneNumber + '</td>'
             + '<td>' + data[element].address + '</td>'
             + '<td><div class="list-icons">' +
-            '<button class="btn-group list-icons-item text-primary-600 bg-white" data-toggle="tooltip" title="Sửa" onclick="edit_user(\'' + data[element].id + '\',\'' + data[element].username + '\',\'' + data[element].password + '\',\'' + data[element].name + '\',\'' + data[element].role + '\',\'' + data[element].email + '\',\'' + data[element].phoneNumber + '\',\'' + data[element].address + '\')" style="border: none"><i class="icon-pencil7"></i></button>\n' +
-            '<button class="btn-group list-icons-item text-danger-600 bg-white" data-toggle="tooltip" title="Xóa" onclick="delete_user(' + data[element].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
+            '<button class="btn btn-group list-icons-item text-primary-600" data-toggle="tooltip" title="Sửa" onclick="edit_user(\'' + data[element].id + '\',\'' + data[element].username + '\',\'' + data[element].name + '\',\'' + data[element].role + '\',\'' + data[element].email + '\',\'' + data[element].phoneNumber + '\',\'' + data[element].address + '\')" style="border: none"><i class="icon-pencil7"></i></button>\n' +
+            '<button class="btn btn-group list-icons-item text-danger-600" data-toggle="tooltip" title="Xóa" onclick="delete_user(' + data[element].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
             '</div></td>'
     }
     tr_user_table = tr_user_table + '</table></td></tr>';

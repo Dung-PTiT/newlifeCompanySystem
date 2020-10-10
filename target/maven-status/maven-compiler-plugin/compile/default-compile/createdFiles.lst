@@ -1,7 +1,6 @@
-company\newlife\util\MultipartFileSender$HttpUtils.class
 company\newlife\controller\client\AboutUsController.class
+company\newlife\controller\admin\UpdatePostController.class
 company\newlife\service\TagService.class
-company\newlife\util\MultipartFileSender.class
 company\newlife\service\impl\CategoryServiceImpl.class
 company\newlife\model\User.class
 company\newlife\controller\api\PostRestController.class
@@ -18,11 +17,15 @@ company\newlife\model\Tag.class
 company\newlife\security\UrlAuthenSuccessHandler.class
 company\newlife\model\Category.class
 company\newlife\controller\api\CategoryRestController.class
+company\newlife\util\FileDir.class
+company\newlife\controller\admin\ServiceAdminController.class
 company\newlife\service\impl\UserServiceImpl.class
 company\newlife\service\UserService.class
 company\newlife\dao\impl\PostDAOImpl.class
+company\newlife\controller\api\RestGlobalExceptionHandler.class
 company\newlife\service\CategoryService.class
 company\newlife\config\SwaggerConfig.class
+company\newlife\model\UploadForm.class
 company\newlife\NewlifeApplication.class
 company\newlife\dao\TagDAO.class
 company\newlife\controller\admin\DashboardAdminController.class
@@ -34,7 +37,6 @@ company\newlife\controller\client\ServiceController.class
 company\newlife\dao\CategoryDAO.class
 company\newlife\controller\admin\ManageUserController.class
 company\newlife\controller\api\ImageController.class
-company\newlife\util\MultipartFileSender$Range.class
 company\newlife\util\paging\PagingResponse.class
 company\newlife\entity\TagEntity.class
 company\newlife\dao\impl\CategoryDAOImpl.class

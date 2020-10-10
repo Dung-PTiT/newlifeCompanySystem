@@ -46,7 +46,7 @@ function getAllPost() {
 }
 
 function showPostTable(postList) {
-    var tr_post_table = '<table class="table">'
+    var tr_post_table = '<table class="table" data-aos="zoom-out-up">'
         + '<tr class="bg-light" style="text-align: center;">'
         + '<th class="pb-0"><h6>Số</h6></th>'
         + '<th class="pb-0" style="display: none">ID</th>'
@@ -80,7 +80,7 @@ function showPostTable(postList) {
             '<h6><span class="text-primary mr-2">Vị trí trong trang:</span>' + postList[index].tag.name + '</h6>' +
             '<h6><span class="text-primary mr-2">Trạng thái:</span>' + postStatus + '</h6></td>'
             + '<td><div class="list-icons">' +
-            '<button class="btn-group list-icons-item text-primary-600 bg-white" data-toggle="modal" data-target="#modal-update-post" onclick="injectTextEditPostModal(\'' + postList[index].id + '\',\'' + postList[index].title + '\',\'' + postList[index].content + '\',\'' + postList[index].active + '\')" style="border: none">' +
+            '<button class="btn btn-group list-icons-item text-primary-600" data-toggle="modal" data-target="#modal-update-post" onclick="injectTextEditPostModal(\'' + postList[index].id + '\',\'' + postList[index].title + '\',\'' + postList[index].content + '\',\'' + postList[index].active + '\')" style="border: none">' +
             '<i class="icon-pencil7" data-toggle="tooltip" title="Sửa"></i></button>\n' +
             // '<button class="btn-group list-icons-item text-danger-600 bg-white" data-toggle="tooltip" title="Xóa" onclick="delete_post(' + postList[index].id + ')"  style="border: none"><i class="icon-trash"></i></button>\n' +
             '</div></td>';

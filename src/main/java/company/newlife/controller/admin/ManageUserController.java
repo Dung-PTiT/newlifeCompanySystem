@@ -26,7 +26,7 @@ public class ManageUserController {
     }
 
     @PostMapping("/manage/user/add-edit")
-    public ResponseEntity<String> addUser(@RequestParam String username, @RequestParam String password,
+    public @ResponseBody  ResponseEntity<String> addUser(@RequestParam String username, @RequestParam String password,
                                           @RequestParam String name, @RequestParam String role,
                                           @RequestParam String address, @RequestParam String email,
                                           @RequestParam String phoneNumber) {
@@ -51,18 +51,17 @@ public class ManageUserController {
     }
 
     @PutMapping("/manage/user/add-edit")
-    public ResponseEntity<String> addUser(@RequestParam String userID, @RequestParam String username,
-                                          @RequestParam String password, @RequestParam String name,
-                                          @RequestParam String role, @RequestParam String address,
-                                          @RequestParam String email, @RequestParam String phoneNumber) {
+    public @ResponseBody ResponseEntity<String> addUser(@RequestParam String id, @RequestParam String username, @RequestParam String password,
+                                          @RequestParam String name, @RequestParam String role,
+                                          @RequestParam String address, @RequestParam String email,
+                                          @RequestParam String phoneNumber) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         String roleUser = userDetails.getAuthorities().toString();
         if (roleUser.contains("ROLE_ADMIN")) {
             User user = new User();
-            user.setId(Integer.parseInt(userID));
+            user.setId(Integer.parseInt(id));
             user.setUsername(username);
-            user.setPassword(password);
             user.setName(name);
             user.setRole(role);
             user.setAddress(address);
