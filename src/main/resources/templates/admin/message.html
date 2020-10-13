@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/template}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <title>Quản lý tin nhắn</title>
+</head>
+<body>
+<div class="content">
+    <section class="container-fluid bg-light h-100" layout:fragment="content_body">
+        <div class="card mt-3 ml-1 mr-1">
+            <div style="margin: auto;">
+                <h5 class="card-title ml-2 mt-2 mb-1">Bảng thống kê tin nhắn</h5>
+            </div>
+            <div class="row" style="margin-right: 0; margin-left: 0;">
+                <div class="dataTables_wrapper no-footer" style="width: 100%">
+                    <div class="datatable-scroll">
+                        <table class="table datatable-basic dataTable no-footer" id="DataTables_Table_0" role="grid"
+                               aria-describedby="DataTables_Table_0_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-sort="ascending"
+                                    aria-label="First Name: activate to sort column descending">First Name
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Last Name: activate to sort column ascending">Last Name
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Job Title: activate to sort column ascending">Job Title
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="DOB: activate to sort column ascending">DOB
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Status: activate to sort column ascending">Status
+                                </th>
+                                <th class="text-center sorting_disabled" rowspan="1" colspan="1" aria-label="Actions"
+                                    style="width: 100px;">Actions
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">Aura</td>
+                                <td>Hard</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>19 Apr 1969</td>
+                                <td><span class="badge badge-danger">Suspended</span></td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <div class="dropdown">
+                                            <a href="#" class="list-icons-item" data-toggle="dropdown"
+                                               aria-expanded="false">
+                                                <i class="icon-menu9"></i>
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right" x-placement="top-end"
+                                                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-158px, -125px, 0px);">
+                                                <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export
+                                                    to .pdf</a>
+                                                <a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export
+                                                    to .csv</a>
+                                                <a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export
+                                                    to .doc</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

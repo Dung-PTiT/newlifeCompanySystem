@@ -16,7 +16,7 @@
     <link th:href="@{/staticAdmin/assets/css/colors.min.css}" rel="stylesheet" type="text/css">
 
     <script th:src="@{/staticAdmin/global_assets/js/main/jquery.min.js}"></script>
-<!--    <script th:src="@{/staticAdmin/global_assets/js/main/bootstrap.min.js}"></script>-->
+    <!--    <script th:src="@{/staticAdmin/global_assets/js/main/bootstrap.min.js}"></script>-->
     <script th:src="@{/staticAdmin/global_assets/js/main/bootstrap.confirm.min.js}"></script>
     <script th:src="@{/staticAdmin/global_assets/js/plugins/loaders/blockui.min.js}"></script>
     <script th:src="@{/staticAdmin/global_assets/js/plugins/ui/ripple.min.js}"></script>
@@ -137,6 +137,12 @@
                             <i class="icon-user" data-toggle="tooltip" title="Quản lý tài khoản"></i>
                             <span>Quản lý tài khoản</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a th:href="@{/admin/manage/message}" class="nav-link">
+                            <i class="icon-indent-increase" data-toggle="tooltip" title="Quản lý tin nhắn"></i>
+                            <span>Quản lý tin nhắn</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -165,7 +171,8 @@
     <div class="modal-dialog">
         <div class="modal-content text-center">
             <div class="modal-header"><h5 class="modal-title text-primary">Thông tin tài khoản</h5>
-                <button type="button" class="bootbox-close-button close text-danger" data-dismiss="modal" aria-hidden="true">×
+                <button type="button" class="bootbox-close-button close text-danger" data-dismiss="modal"
+                        aria-hidden="true">×
                 </button>
             </div>
             <div class="modal-body">

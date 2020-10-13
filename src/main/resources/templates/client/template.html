@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/style.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/revolution-slider.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/shortcodes.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/staticClient/stylesheets/simple-line-icons.css}">
     <link rel="stylesheet" type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.min.js}"></script>
@@ -27,39 +29,18 @@
     <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.tools.min.js}"></script>
     <script type="text/javascript" th:src="@{/staticClient/javascript/jquery.themepunch.revolution.min.js}"></script>
     <script type="text/javascript" th:src="@{/staticClient/javascript/slider.js}"></script>
-    <!--    <link rel="stylesheet" type="text/css"-->
-    <!--          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <!--    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">-->
-    <!--    </script>-->
-    <!--    <script async defer-->
-    <!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu8BQn5PRVzfQ6-_dgpUQRIqej_CTY2Qc&callback=initMap">-->
-    <!--    </script>-->
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <!--    <script src="https://sp.zalo.me/plugins/sdk.js"></script>-->
     <link th:href="@{/staticClient/newlife/images/logoNewlife.png}" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" th:href="@{/staticClient/newlife/css/template.css}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         $(document).ready(function () {
-            // initMap();
             AOS.init();
         });
-
-        // function initMap() {
-        //     var map = new google.maps.Map(document.getElementById('add_company_map'), {
-        //         zoom: 17,
-        //         center: {lat: 21.020309, lng: 105.826360},
-        //         disableDefaultUI: true,
-        //         fullscreenControl: true,
-        //         zoomControl: true
-        //     });
-        //     var infowindow = new google.maps.InfoWindow;
-        //
-        //     var marker = new google.maps.Marker({
-        //         position: new google.maps.LatLng(21.020309, 105.826360),
-        //         map: map
-        //     });
-        // }
     </script>
 </head>
 <body class="header_sticky" style="margin-top: -25px">
@@ -67,13 +48,11 @@
     <header id="header" class="header clearfix" style="background-color: #273039; border-color: #273039">
         <div class="row menu-row">
             <div class="clearfix">
-                <div class="col-3 col-sm-3 col-md-1 menu-main row" data-aos="fade-right">
-                    <div id="logo" class="logo">
-                        <a th:href="@{/dashboard}" rel="home">
-                            <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" class="menu-logo logoImg">
-                            <span class="header-text menu-company">NEWLIFE</span>
-                        </a>
-                    </div>
+                <div class="col-3 col-sm-3 col-md-1  menu-main row" data-aos="fade-right">
+                    <a th:href="@{/dashboard}" style="display: inline-flex;">
+                        <img th:src="@{/api/image/upload/logoNewlife.png}" class="menu-logo">
+                        <h1 class="header-text menu-company">NEWLIFE</h1>
+                    </a>
                 </div>
                 <div class="col-9 col-sm-9 col-md-11 btn-menu"></div>
                 <div class="col-9 col-sm-9 col-md-11">
@@ -127,8 +106,7 @@
                     <div class="col-xs-12 col-sm-4 footer-contact-info">
                         <div class="logo logo-footer">
                             <a th:href="@{/dashboard}" rel="home">
-                                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="image"
-                                     class="logoImg">
+                                <img th:src="@{/staticClient/newlife/images/logoNewlife.png}" alt="image">
                                 <span class="header-text">NEWLIFE</span>
                             </a>
                         </div>
@@ -219,8 +197,7 @@
                     </label>
                     <input type="submit" class="search-submit" value="Search">
                 </form>
-            </div><!-- /.widget-search -->
-
+            </div>
             <div id="nav_menu-2" class="widget widget-categories">
                 <h4 class="widget-title">Extra Pages</h4>
                 <ul>
@@ -246,10 +223,10 @@
             </div>
         </div>
     </div>
-    <div class="zalo-chat-widget" data-oaid="1259398921512045854"
-         data-welcome-message="NEWLIFE rất vui khi được hỗ trợ bạn" data-autopopup="0"
-         data-width="300" data-height="370">
-    </div>
+    <!--    <div class="zalo-chat-widget" data-oaid="1259398921512045854"-->
+    <!--         data-welcome-message="NEWLIFE rất vui khi được hỗ trợ bạn" data-autopopup="0"-->
+    <!--         data-width="300" data-height="370">-->
+    <!--    </div>-->
 </div>
 </body>
 </html>

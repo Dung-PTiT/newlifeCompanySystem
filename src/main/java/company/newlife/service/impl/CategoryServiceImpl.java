@@ -32,15 +32,6 @@ public class CategoryServiceImpl implements CategoryService {
         category.setId(categoryEntity.getId());
         category.setCode(categoryEntity.getCode());
         category.setName(categoryEntity.getName());
-//        if (categoryEntity.getTags() != null) {
-//            category.setTags(categoryEntity.getTags().stream().map(element -> {
-//                Tag tag = new Tag();
-//                tag.setId(element.getId());
-//                tag.setCode(element.getCode());
-//                tag.setName(element.getName());
-//                return tag;
-//            }).collect(Collectors.toSet()));
-//        }
         return category;
     }
 

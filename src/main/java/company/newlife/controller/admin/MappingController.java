@@ -6,10 +6,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/admin")
-public class ServiceAdminController {
+public class MappingController {
+
+    @GetMapping("/manage/dashboard")
+    public String goToDashboard() {
+        return "admin/dashboard";
+    }
 
     @GetMapping("/manage/service")
-    public String goToDashboard() {
+    public String goToService() {
         return "admin/service";
     }
+
+    @GetMapping("/manage/message")
+    public String goToMessage() {
+        return "admin/message";
+    }
+
 }

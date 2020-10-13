@@ -52,6 +52,7 @@ html {
 
 body {
     line-height: 1;
+    overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -672,7 +673,8 @@ h4 {
 
 .header.upscrolled {
     opacity: 1;
-    top: 0;
+    /*top: 0;*/
+    /* fixed header not scroll */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -2314,15 +2316,15 @@ input#subscribe-email {
 }
 
 .parallax1 {
-    background-image: url(./static/staticClient/images/slides/bgParallax1.jpg);
+    background-image: url(/staticClient/images/slides/bgParallax1.jpg);
 }
 
 .parallax2 {
-    background-image: url(./static/staticClient/images/slides/bgParallax2.jpg);
+    background-image: url(/staticClient/images/slides/bgParallax2.jpg);
 }
 
 .parallax3 {
-    background-image: url(./static/staticClient/images/slides/bgParallax3.jpg);
+    background-image: url(/staticClient/images/slides/bgParallax3.jpg);
 }
 
 .parallax4 {
